@@ -10,9 +10,13 @@
 
 |-}
 
--- Type for element
--- Need to think about this...
+-- Type for node
+-- The first field is the global node number
+-- The second field is a list of coordinates in n-dimensional space
+data Node = Node {nodeNumber :: Int, coordinates :: [Double]} deriving (Show)
 
+-- Type for element
+newtype Element = Element [Node] deriving (Show)
 
 -- Function for the basis (only linear)
 psi :: Double -> Int -> Double
@@ -33,4 +37,11 @@ getGaussPoints 1 = ([0.0], [2.0])
 getGaussPoints 2 = ([-0.577350269189626, -0.577350269189626], [1.0, 1.0])
 getGaussPoints _ = error "Gauss points only up to 2 point quadrature available."
 
+-- Function for number of nodes in a mesh
+numNodesMesh :: Int -> Int -> Int
+numNodesMesh nElem Order = 
+
+-- Function for generating a mesh
+generateMesh :: Double -> Double -> Int -> Int -> [Element]
+generateMesh xMin xMax nElem order = 
 
