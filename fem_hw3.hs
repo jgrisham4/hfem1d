@@ -21,6 +21,9 @@ data Node = Node {
 -- Type for element - holds a list of nodes
 newtype Element = Element {nodes :: [Node]} deriving (Show)
 
+-- Type for mesh
+newtype Mesh = Mesh {elements :: [Element]} deriving (Show)
+
 -- Function for getting node numbers for the given element
 getNodeNumbers :: Element -> [Int]
 getNodeNumbers elem = map nodeNumber $ nodes elem
@@ -44,10 +47,28 @@ getGaussPoints 1 = ([0.0], [2.0])
 getGaussPoints 2 = ([-0.577350269189626, -0.577350269189626], [1.0, 1.0])
 getGaussPoints _ = error "Gauss points only up to 2 point quadrature available."
 
+-- Function for number of nodes in an element
+numNodesElem :: Int -> Int
+numNodesElem order = 1 + order
+
 -- Function for number of nodes in a mesh
---numNodesMesh :: Int -> Int -> Int
---numNodesMesh nElem Order =
+numNodesMesh :: Int -> Int -> Int
+numNodesMesh nElem order = nElem * order + 1
+
+-- Function for discretizing an interval
+linspace :: Double -> Double -> Int -> [Double]
+linspace xMin xMax nIncr = [xMin + fromIntegral i * dx | i <- [0..nIncr-1]]
+  where
+    dx = (xMax - xMin)/(fromIntegral nIncr - 1.0)
 
 -- Function for generating a mesh
---generateMesh :: Double -> Double -> Int -> Int -> [Element]
---generateMesh xMin xMax nElem order =
+-- Only works for linear for now
+--generateMesh xMin xMax nElem order = Mesh [Element [nodes !! idx_elem, nodes !! (idx_elem+1)] | idx_elem <- [0..nElem-1]]
+--generateMesh _ _ _ _ = error "Mesh generation only works for linear or quad elements for now."
+generateMesh :: Double -> Double -> Int -> Int -> Mesh
+generateMesh xMin xMax nElem order = Mesh [Element [nodes !! (i+idx_elem) | i <- [0..nNodes-1]] | idx_elem <- [0,nNodes..nNodesMesh-1]]
+  where
+    nNodes = numNodesElem order
+    nNodesMesh = numNodesMesh nElem order
+    node_coords = linspace xMin xMax nNodesMesh
+    nodes = [Node i [node_coords !! i] | i <- [0..length node_coords-1]]
