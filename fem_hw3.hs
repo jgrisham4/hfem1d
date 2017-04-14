@@ -46,9 +46,8 @@ getGaussPoints _ = error "Gauss points only up to 2 point quadrature available."
 
 -- Function for number of nodes in a mesh
 --numNodesMesh :: Int -> Int -> Int
---numNodesMesh nElem Order = 
+--numNodesMesh nElem Order =
 
 -- Function for generating a mesh
 --generateMesh :: Double -> Double -> Int -> Int -> [Element]
---generateMesh xMin xMax nElem order = 
-
+--generateMesh xMin xMax nElem order =
