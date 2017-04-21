@@ -62,9 +62,7 @@ linspace xMin xMax nIncr = [xMin + fromIntegral i * dx | i <- [0..nIncr-1]]
     dx = (xMax - xMin)/(fromIntegral nIncr - 1.0)
 
 -- Function for generating a mesh
--- Only works for linear for now
 --generateMesh xMin xMax nElem order = Mesh [Element [nodes !! idx_elem, nodes !! (idx_elem+1)] | idx_elem <- [0..nElem-1]]
---generateMesh _ _ _ _ = error "Mesh generation only works for linear or quad elements for now."
 generateMesh :: Double -> Double -> Int -> Int -> Mesh
 generateMesh xMin xMax nElem order = Mesh [Element [nodes !! (i+idx_elem) | i <- [0..nNodes-1]] | idx_elem <- [0,nNodes..nNodesMesh-1]]
   where
