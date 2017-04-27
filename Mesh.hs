@@ -3,6 +3,9 @@ module Mesh
 , Element
 , Mesh
 , generateMesh
+, coordinates
+, nodes
+, computeJacobianDet
 ) where
 
 -- Type for node
@@ -18,6 +21,15 @@ newtype Element = Element {nodes :: [Node]} deriving (Show)
 
 -- Type for mesh
 newtype Mesh = Mesh {elements :: [Element]} deriving (Show)
+
+-- Function for computing the Jacobian
+computeJacobianDet :: Element -> Double
+computeJacobianDet elem = (head (coordinates firstNode) - head (coordinates lastNode)) / 2.0
+  where
+    elemNodes = nodes elem
+    firstNode = head elemNodes
+    lastNode = last elemNodes
+
 
 -- Function for getting node numbers for the given element
 getNodeNumbers :: Element -> [Int]
