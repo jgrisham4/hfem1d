@@ -4,7 +4,7 @@ where
 import Numeric.LinearAlgebra.Data
 import Numeric.LinearAlgebra.HMatrix
 import Mesh
-import ShapeFcns (psi, dpsi)
+import ShapeFcns
 
 -- Function for getting Gauss points for integration
 -- Given the number of points it returns a list of the points and the weights
@@ -34,12 +34,15 @@ elemStiffnessIntegrand elem xi = fromLists [[psi xi i * psi xi j - dpsi xi i * d
 elemLoadIntegrand :: Mesh.Element -> Double -> Vector Double
 elemLoadIntegrand elem xi = fromList [interp sourceTerm elem xi | i <- [0..1]]
 
+-- This function integrates an element when provided with the element and the
+-- number of Gauss points.
 integrateElement :: Mesh.Element -> Int -> (Matrix Double, Vector Double)
-integrateElement elem npts = (K, f)
+integrateElement elem npts = (stiffnessMat, loadVec)
   where
-    gaussData = getGaussPoints npts
-    gPoints = map fst gaussData
-    gWeights = map snd gaussData
-    detJ = computeJacobianDet elem
-    K = detJ * map (+) [(gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
-    f = detJ * map (+) [(gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    gaussData    = getGaussPoints npts
+    gPoints      = map fst gaussData
+    gWeights     = map snd gaussData
+    detJ         = computeJacobianDet elem
+    stiffnessMat = detJ * map (+) [(gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    loadVec      = detJ * map (+) [(gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+

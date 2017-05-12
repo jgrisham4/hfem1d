@@ -8,11 +8,13 @@ module Mesh
 , computeJacobianDet
 ) where
 
+import Data.List
+
 -- Type for node
 -- The first field is the global node number
 -- The second field is a list of coordinates in n-dimensional space
 data Node = Node {
-  nodeNumber :: Int,
+  nodeNumber  :: Int,
   coordinates :: [Double]
 } deriving (Show)
 
@@ -20,9 +22,13 @@ data Node = Node {
 newtype Element = Element {nodes :: [Node]} deriving (Show)
 
 -- Type for mesh
-newtype Mesh = Mesh {elements :: [Element]} deriving (Show)
+data Mesh = Mesh {
+  elements :: [Element],
+  order    :: Int
+} deriving (Show)
 
 -- Function for computing the Jacobian
+-- Only works for linear basis
 computeJacobianDet :: Element -> Double
 computeJacobianDet elem = (head (coordinates firstNode) - head (coordinates lastNode)) / 2.0
   where
@@ -30,8 +36,7 @@ computeJacobianDet elem = (head (coordinates firstNode) - head (coordinates last
     firstNode = head elemNodes
     lastNode = last elemNodes
 
-
--- Function for getting node numbers for the given element
+-- Function for getting global node numbers for the given element
 getNodeNumbers :: Element -> [Int]
 getNodeNumbers elem = map nodeNumber $ nodes elem
 
@@ -57,9 +62,25 @@ generateConnectivity order nelem = [map (\ x -> x + (length localConnectivity - 
 
 -- Function for generating a mesh
 generateMesh :: Double -> Double -> Int -> Int -> Mesh
-generateMesh xMin xMax nElem order = Mesh [Element [nodes !! i | i <- connectivity !! elemNum] | elemNum <- [0..(nElem-1)]]
+generateMesh xMin xMax nElem order = Mesh [Element [nodes !! i | i <- connectivity !! elemNum] | elemNum <- [0..(nElem-1)]] order
   where
     nNodesMesh = numNodesMesh nElem order
     node_coords = linspace xMin xMax nNodesMesh
     nodes = [Node i [node_coords !! i] | i <- [0..length node_coords-1]]
     connectivity = generateConnectivity order nElem
+
+-- Function for finding the node-element connectivity
+-- Given a node, and a mesh, this function returns
+-- a list of integers which identify which elements
+-- contain the given node.
+nodeElemCon :: Node -> Mesh -> [Int]
+nodeElemCon n grid = [i | i <- [0..length elemList - 1], nodeNumber n `elem` map nodeNumber (nodes (elemList !! i))]
+  where
+    elemList = elements grid
+
+-- Given a mesh, this function computes the unique i-j
+buildSparsityPattern :: Mesh -> [(Int, Int)]
+buildSparsityPattern grid = Data.List.nub $ concat [[((con !! k) !! i, (con !! k) !! j) | i <- [0..(order grid)], j <- [0..(order grid)]] | k <- [0..(numElem-1)]]
+  where
+    numElem = length $ elements grid
+    con = map getNodeNumbers $ elements grid
