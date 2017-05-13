@@ -19,7 +19,10 @@ data Node = Node {
 } deriving (Show)
 
 -- Type for element - holds a list of nodes
-newtype Element = Element {nodes :: [Node]} deriving (Show)
+data Element = Element {
+  nodes :: [Node],
+  elemNumber :: Int
+} deriving (Show)
 
 -- Type for mesh
 data Mesh = Mesh {
@@ -62,7 +65,7 @@ generateConnectivity order nelem = [map (\ x -> x + (length localConnectivity - 
 
 -- Function for generating a mesh
 generateMesh :: Double -> Double -> Int -> Int -> Mesh
-generateMesh xMin xMax nElem order = Mesh [Element [nodes !! i | i <- connectivity !! elemNum] | elemNum <- [0..(nElem-1)]] order
+generateMesh xMin xMax nElem order = Mesh [Element [nodes !! i | i <- connectivity !! elemNum] elemNum | elemNum <- [0..(nElem-1)]] order
   where
     nNodesMesh = numNodesMesh nElem order
     node_coords = linspace xMin xMax nNodesMesh
@@ -73,12 +76,23 @@ generateMesh xMin xMax nElem order = Mesh [Element [nodes !! i | i <- connectivi
 -- Given a node, and a mesh, this function returns
 -- a list of integers which identify which elements
 -- contain the given node.
-nodeElemCon :: Node -> Mesh -> [Int]
-nodeElemCon n grid = [i | i <- [0..length elemList - 1], nodeNumber n `elem` map nodeNumber (nodes (elemList !! i))]
+nodeElemCon :: Int -> Mesh -> [Int]
+nodeElemCon nodeNum grid = [i | i <- [0..length elemList - 1], nodeNum `elem` map nodeNumber (nodes (elemList !! i))]
   where
     elemList = elements grid
 
--- Given a mesh, this function computes the unique i-j
+-- Function for mapping local node numbers to global node numbers
+localToGlobal :: Int -> Int -> Mesh -> Int
+localToGlobal elemNum localNodeNum grid = nodeNumber $ nodes (elements grid !! elemNum) !! localNodeNum
+
+-- Inverse of the above function
+globalToLocal :: Int -> Mesh -> [(Int, Int)]
+globalToLocal globalNodeNum grid = [(map elemNumber matchingElems !! mn, localNodeNums !! mn) | mn <- [0..(length matchingElems - 1)]]
+  where
+    matchingElems = filter (\ e -> globalNodeNum `elem` getNodeNumbers e) $ elements grid
+    localNodeNums = concat [[i | i <- [0..(length nodeList - 1)], nodeNumber (nodeList !! i) == globalNodeNum] | nodeList <- map nodes matchingElems]
+
+-- Given a mesh, this function computes the unique i-j entries
 buildSparsityPattern :: Mesh -> [(Int, Int)]
 buildSparsityPattern grid = Data.List.nub $ concat [[((con !! k) !! i, (con !! k) !! j) | i <- [0..(order grid)], j <- [0..(order grid)]] | k <- [0..(numElem-1)]]
   where

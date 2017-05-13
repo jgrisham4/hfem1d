@@ -1,6 +1,7 @@
 module Solver
 where
 
+import Data.List
 import Numeric.LinearAlgebra.Data
 import Numeric.LinearAlgebra.HMatrix
 import Mesh
@@ -43,6 +44,18 @@ integrateElement elem npts = (stiffnessMat, loadVec)
     gPoints      = map fst gaussData
     gWeights     = map snd gaussData
     detJ         = computeJacobianDet elem
-    stiffnessMat = detJ * map (+) [(gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
-    loadVec      = detJ * map (+) [(gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    stiffnessMat = detJ * foldl (+) (zero 2 2) [(gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    loadVec      = detJ * foldl (+) (zero 2 2) [(gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
 
+-- Function for getting an entry from a stiffness matrix given
+-- the global node number
+getKeEntry :: Int -> Int -> Mesh -> [Matrix Double] -> Double
+getKeEntry colNum rowNum grid elemStiffnessMats = []
+
+-- Function for getting the contributions of elements to global
+-- stiffness matrix column-by-column
+getColContribs :: Int -> Mesh -> [Matrix Double] -> [(Int, Double)]
+getColContribs colNum grid Kelem = []
+  where
+    numElem = length $ elements grid
+    con = map getNodeNumbers $ elements grid
