@@ -51,7 +51,7 @@ integrateElement elem npts = (stiffnessMat, loadVec)
 
 -- This function takes an AssocMatrix and sums duplicate entries
 computeUnique :: [((Int, Int), Double)] -> [((Int, Int), Double)]
-computeUnique inpList = map (foldr1 (\(coord, v1) (_, v2) -> (coord, v1 + v2))) . groupBy (\(a,_) (b,_) -> a == b) . sort $ inpList
+computeUnique = map (foldr1 (\(coord, v1) (_, v2) -> (coord, v1 + v2))) . groupBy (\(a,_) (b,_) -> a == b) . sort
 
 ---- Function for assembling the global stiffness matrix
 --assembleGlobalStiffness :: [Matrix Double] -> Mesh -> GMatrix
