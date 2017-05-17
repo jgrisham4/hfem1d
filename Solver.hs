@@ -41,21 +41,23 @@ integrateElement :: Mesh.Element -> Int -> (Matrix Double, Vector Double)
 integrateElement elem npts = (stiffnessMat, loadVec)
   where
     gaussData    = getGaussPoints npts
-    gPoints      = map fst gaussData
-    gWeights     = map snd gaussData
+    gPoints      = fst gaussData
+    gWeights     = snd gaussData
     detJ         = computeJacobianDet elem
-    stiffnessMat = detJ * foldl (+) (zero 2 2) [(gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
-    loadVec      = detJ * foldl (+) (zero 2 2) [(gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    zmat         = fromLists [[0.0, 0.0], [0.0, 0.0]] :: Matrix Double
+    zvec         = fromList [0.0, 0.0] :: Vector Double
+    stiffnessMat = scalar detJ * foldl (+) zmat [scalar (gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    loadVec      = scalar detJ * foldl (+) zvec [scalar (gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
 
--- Function for getting an entry from a stiffness matrix given
--- the global node number
-getKeEntry :: Int -> Int -> Mesh -> [Matrix Double] -> Double
-getKeEntry colNum rowNum grid elemStiffnessMats = []
+-- This function takes an AssocMatrix and sums duplicate entries
+computeUnique :: [((Int, Int), Double)] -> [((Int, Int), Double)]
+computeUnique inpList = map (foldr1 (\(coord, v1) (_, v2) -> (coord, v1 + v2))) . groupBy (\(a,_) (b,_) -> a == b) . sort $ inpList
 
--- Function for getting the contributions of elements to global
--- stiffness matrix column-by-column
-getColContribs :: Int -> Mesh -> [Matrix Double] -> [(Int, Double)]
-getColContribs colNum grid Kelem = []
-  where
-    numElem = length $ elements grid
-    con = map getNodeNumbers $ elements grid
+---- Function for assembling the global stiffness matrix
+--assembleGlobalStiffness :: [Matrix Double] -> Mesh -> GMatrix
+--assembleGlobalStiffness Ke grid = mkSparse $ computeUnique $ concat [[((connectivity (elements !! en) !! i, connectivity (elements !! en) !! j), atIndex (Ke !! en) (i,j)), i <- [0..(order grid)], j <- [0..(order grid)] | en <- (length (elements grid) - 1)]
+--
+
+-- fromList [((1,2),"hello")] :: Data.Map.Map (Int,Int) String
+-- Strict map.
+-- Data.Map.unionWith mappend (fromList [((1,2),"hello")]) (fromList [((1,2)," world")]) :: Data.Map.Map (Int,Int) String

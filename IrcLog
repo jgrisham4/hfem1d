@@ -1,0 +1,726 @@
+IRC log started Tue May 16 22:04:42 2017
+[1;31mù[0m[1;37mí[1;31mù[0m BitchX: Auto Response is set to - fDev2179
+[1;31mù[0m[1;37mí[1;31mù[0m Connecting to port 6667 of server chat.freenode.net [refnum 0]
+[1;32m[freenode][0m Looking up your hostname...[0m
+[1;32m[freenode][0m Checking Ident[0m
+[1;32m[freenode][0m Found your hostname[0m
+[1;32m[freenode][0m No Ident response[0m
+[1;31mù[0m[1;37mí[1;31mù[0m BitchX: For more information about BitchX type /about
+[1;31mù[0m[1;37mí[1;31mù[0m Welcome to the freenode Internet Relay Chat Network fDev2179 (from verne.freenode.net)
+[1;31mù[0m[1;37mí[1;31mù[0m Your host is verne.freenode.net[185.30.166.37/6667], running version ircd-seven-1.1.4 (from verne.freenode.net)
+[1;31mù[0m[1;37mí[1;31mù[0m This server was created Sat Jan 7 2017 at 11:53:54 EST (from verne.freenode.net)
+[1;31mù[0m[1;37mí[1;31mù[0m verne.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI 
+[1;31mù[0m[1;37mí[1;31mù[0m CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server 
+[1;31mù[0m[1;37mí[1;31mù[0m CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 ETRACE WHOX KNOCK :are supported by this server 
+[1;31mù[0m[1;37mí[1;31mù[0m SAFELIST ELIST=CTU CPRIVMSG CNOTICE  are supported by this server
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0mlocal users on irc[1;30m([0m5153[1;30m)][0m 6%[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0mglobal users on irc[1;30m([0m129[1;30m)][0m 0%[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0minvisible users on irc[1;30m([0m88011[1;30m)][0m 100%[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0mircops on irc[1;30m([0m29[1;30m)][0m 0%[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0mtotal users on irc[1;30m([0m88140[1;30m)][0m[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0munknown connections[1;30m([0m22[1;30m)][0m[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0mtotal servers on irc[1;30m([0m27[1;30m)][0m [1;30m([0mavg. 3264 users per server[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0mtotal channels created[1;30m([0m59757[1;30m)][0m [1;30m([0mavg. 1 users per channel[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m 5153 6861  Current local users 5153, max 6861
+[1;31mù[0m[1;37mí[1;31mù[0m 88140 96395  Current global users 88140, max 96395
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[0mHighest client connection count[1;30m([0m6863[1;30m) [1;30m([0m6861[1;30m)][0m[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mMode change [1;30m[[1;37m+i[1;30m][0m for user [0;36mfDev2179[0m
+[1;30m-[1;35mNickServ[1;30m([0;35mNickServ@services.[1;30m)-[0m This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mMode change [1;30m[[1;37m+w[1;30m][0m for user [0;36mfDev2179[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mfDev2179 [1;30m[[0;36m~fDev2179@cpe-173-172-185-189.tx.res.rr.com[1;30m][0m has joined #numerical-haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m Topic [1;30m([0;36m#numerical-haskell[1;30m):[0m the irc channel for the larger numerical haskell community. All topics regarding computational/applied mathematics are welcome. core numerical-haskell package is https://github.com/wellposed/numerical current docs at http://bit.ly/prealphadocs â€”  BLAS LAPACK binding at github.com/wellposed/hblas â€”  The mailing list is  bit.ly/1jGLGnq[0m
+[1;31mù[0m[1;37mí[1;31mù[0m Topic [1;30m([0;36m#numerical-haskell[1;30m):[0m set by [0;36mcarter[0m at [0;36mWed Aug 13 15:44:33 2014[0m[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#numerical-haskell[1;30m:[0;32m55[1;30m/[0;32m55[1;30m)][0;36m [0m
+[1;30m[ [0m[1;37mfDev2179  [0m[1;30m][0m [1;30m[ [0m[1;34mpeterhil  [0m[1;30m][0m [1;30m[ [0m[1;34mhamishmack[0m[1;30m][0m [1;30m[ [0m[1;34mnumberten [0m[1;30m][0m [1;30m[ [0m[1;34mmbrcknl   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mClaudiusMa[0m[1;30m][0m [1;30m[ [0m[1;34mhuonw_    [0m[1;30m][0m [1;30m[ [0m[1;34mAxman6    [0m[1;30m][0m [1;30m[ [0m[1;34mlambdabot [0m[1;30m][0m [1;30m[ [0m[1;34mmartingale[0m[1;30m][0m 
+[1;30m[ [0m[1;34mtautologic[0m[1;30m][0m [1;30m[ [0m[1;34mjle`      [0m[1;30m][0m [1;30m[ [0m[1;34mhappymons [0m[1;30m][0m [1;30m[ [0m[1;34mcchalmers [0m[1;30m][0m [1;30m[ [0m[1;34mocharles  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmvr_      [0m[1;30m][0m [1;30m[ [0m[1;34mmonad_cat [0m[1;30m][0m [1;30m[ [0m[1;34m{AS}      [0m[1;30m][0m [1;30m[ [0m[1;34msclv      [0m[1;30m][0m [1;30m[ [0m[1;34mangerman  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtk_       [0m[1;30m][0m [1;30m[ [0m[1;34mdolio     [0m[1;30m][0m [1;30m[ [0m[1;34mmkloczko  [0m[1;30m][0m [1;30m[ [0m[1;34mgspia     [0m[1;30m][0m [1;30m[ [0m[1;34mjackhill  [0m[1;30m][0m 
+[1;30m[ [0m[1;34malanz     [0m[1;30m][0m [1;30m[ [0m[1;34mdylex     [0m[1;30m][0m [1;30m[ [0m[1;34milovezfs_ [0m[1;30m][0m [1;30m[ [0m[1;34metrepum   [0m[1;30m][0m [1;30m[ [0m[1;34mnkpart    [0m[1;30m][0m 
+[1;30m[ [0m[1;34miross     [0m[1;30m][0m [1;30m[ [0m[1;34malpounet  [0m[1;30m][0m [1;30m[ [0m[1;34mcarter    [0m[1;30m][0m [1;30m[ [0m[1;34mzxtx      [0m[1;30m][0m [1;30m[ [0m[1;34maverell   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mwjm       [0m[1;30m][0m [1;30m[ [0m[1;34mtolt      [0m[1;30m][0m [1;30m[ [0m[1;34mcarter-znc[0m[1;30m][0m [1;30m[ [0m[1;34mnkartashov[0m[1;30m][0m [1;30m[ [0m[1;34mmikeizbick[0m[1;30m][0m 
+[1;30m[ [0m[1;34mMarcelineV[0m[1;30m][0m [1;30m[ [0m[1;34mcarvite   [0m[1;30m][0m [1;30m[ [0m[1;34mwrengr_awa[0m[1;30m][0m [1;30m[ [0m[1;34mpmn       [0m[1;30m][0m [1;30m[ [0m[1;34mpeddie    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbitemyapp [0m[1;30m][0m [1;30m[ [0m[1;34mrwbarton  [0m[1;30m][0m [1;30m[ [0m[1;34mluite_    [0m[1;30m][0m [1;30m[ [0m[1;34markeet    [0m[1;30m][0m [1;30m[ [0m[1;34mrelrod    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkini      [0m[1;30m][0m [1;30m[ [0m[1;34mFuuzetsu  [0m[1;30m][0m [1;30m[ [0m[1;34mcocreature[0m[1;30m][0m [1;30m[ [0m[1;34mHijiri    [0m[1;30m][0m [1;30m[[1;36m@[0m[1;34mChanServ  [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m Channel #numerical-haskell was created at Thu Nov 14 14:09:28 2013
+[1;31mù[0m[1;37mí[1;31mù[0m BitchX: Join to #numerical-haskell was synched in 0.353 secs!!
+[1;30m[[0;31mmsg[1;30m([1;31mNickServ[1;30m)] [0midentify w2222w[0m
+[1;30m-[1;35mNickServ[1;30m([0;35mNickServ@services.[1;30m)-[0m You are now identified for fDev2179.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mfDev2179 [1;30m[[0;36m~fDev2179@cpe-173-172-185-189.tx.res.rr.com[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m Topic [1;30m([0;36m#haskell[1;30m):[0m https://www.haskell.org | https://wiki.haskell.org/IRC_channel | Paste code/errors: http://lpaste.net/new/haskell | Logs: http://tunes.org/~nef/logs/haskell/?C=M;O=D http://ircbrowse.net/day/haskell/today?mode=recent | https://www.reddit.com/r/haskell | Admin: #haskell-ops | Offtopic: #haskell-offtopic | https://downloads.haskell.org | https://summer.haskell.org Summer of Haskell 2017[0m
+[1;31mù[0m[1;37mí[1;31mù[0m Topic [1;30m([0;36m#haskell[1;30m):[0m set by [0;36mgeekosaur!allbery@dreamshell.ttuttle.net[0m at [0;36mWed Apr  5 14:51:36 2017[0m[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m50[1;30m/[0;32m50[1;30m)][0;36m [0m
+[1;30m[ [0m[1;37mfDev2179  [0m[1;30m][0m [1;30m[ [0m[1;34mkmels     [0m[1;30m][0m [1;30m[ [0m[1;34mshangxiao [0m[1;30m][0m [1;30m[ [0m[1;34mDestol    [0m[1;30m][0m [1;30m[ [0m[1;34mmagicman  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mCoderPuppy[0m[1;30m][0m [1;30m[ [0m[1;34mdan_f     [0m[1;30m][0m [1;30m[ [0m[1;34mcanta     [0m[1;30m][0m [1;30m[ [0m[1;34mlavalike  [0m[1;30m][0m [1;30m[ [0m[1;34mdarjeeli1 [0m[1;30m][0m 
+[1;30m[ [0m[1;34mandyhuzhil[0m[1;30m][0m [1;30m[ [0m[1;34mvaruaa    [0m[1;30m][0m [1;30m[ [0m[1;34msleffy    [0m[1;30m][0m [1;30m[ [0m[1;34mDurbley   [0m[1;30m][0m [1;30m[ [0m[1;34mcyborg-one[0m[1;30m][0m 
+[1;30m[ [0m[1;34mJeanCarloM[0m[1;30m][0m [1;30m[ [0m[1;34mzero_byte [0m[1;30m][0m [1;30m[ [0m[1;34mhexagoxel [0m[1;30m][0m [1;30m[ [0m[1;34mMedDev    [0m[1;30m][0m [1;30m[ [0m[1;34mexferenceB[0m[1;30m][0m 
+[1;30m[ [0m[1;34mkritzcreek[0m[1;30m][0m [1;30m[ [0m[1;34msgronblo  [0m[1;30m][0m [1;30m[ [0m[1;34msimukis_  [0m[1;30m][0m [1;30m[ [0m[1;34mJeanCarl1M[0m[1;30m][0m [1;30m[ [0m[1;34mrenzhi    [0m[1;30m][0m 
+[1;30m[ [0m[1;34msellout-  [0m[1;30m][0m [1;30m[ [0m[1;34mP1RATEZ   [0m[1;30m][0m [1;30m[ [0m[1;34mafarmer   [0m[1;30m][0m [1;30m[ [0m[1;34mhucksy    [0m[1;30m][0m [1;30m[ [0m[1;34mjao       [0m[1;30m][0m 
+[1;30m[ [0m[1;34msystadmin [0m[1;30m][0m [1;30m[ [0m[1;34mlambdamu_ [0m[1;30m][0m [1;30m[ [0m[1;34mjustanothe[0m[1;30m][0m [1;30m[ [0m[1;34mReshi     [0m[1;30m][0m [1;30m[ [0m[1;34mfilterfish[0m[1;30m][0m 
+[1;30m[ [0m[1;34msword865  [0m[1;30m][0m [1;30m[ [0m[1;34mZialus    [0m[1;30m][0m [1;30m[ [0m[1;34mNoCreativi[0m[1;30m][0m [1;30m[ [0m[1;34mJoshS     [0m[1;30m][0m [1;30m[ [0m[1;34mfortruce  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdrewbert  [0m[1;30m][0m [1;30m[ [0m[1;34mcdg       [0m[1;30m][0m [1;30m[ [0m[1;34mYongJoon  [0m[1;30m][0m [1;30m[ [0m[1;34mmizu_no_ot[0m[1;30m][0m [1;30m[ [0m[1;34mdunx      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mcrobbins  [0m[1;30m][0m [1;30m[ [0m[1;34mbenl23    [0m[1;30m][0m [1;30m[ [0m[1;34mcschneid_ [0m[1;30m][0m [1;30m[ [0m[1;34mpeterbecic[0m[1;30m][0m [1;30m[ [0m[1;34meacameron [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m53[1;30m/[0;32m53[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mmrkgnao   [0m[1;30m][0m [1;30m[ [0m[1;34mmkoenig   [0m[1;30m][0m [1;30m[ [0m[1;34mlambda-112[0m[1;30m][0m [1;30m[ [0m[1;34mvaibhavsag[0m[1;30m][0m [1;30m[ [0m[1;34mSupersonic[0m[1;30m][0m 
+[1;30m[ [0m[1;34mjordan335 [0m[1;30m][0m [1;30m[ [0m[1;34mhalogenand[0m[1;30m][0m [1;30m[ [0m[1;34mHunter1   [0m[1;30m][0m [1;30m[ [0m[1;34mjedws     [0m[1;30m][0m [1;30m[ [0m[1;34mContessaTP[0m[1;30m][0m 
+[1;30m[ [0m[1;34mNoldorin  [0m[1;30m][0m [1;30m[ [0m[1;34mcpup      [0m[1;30m][0m [1;30m[ [0m[1;34mnighty--  [0m[1;30m][0m [1;30m[ [0m[1;34mwhaletechn[0m[1;30m][0m [1;30m[ [0m[1;34mslack1256 [0m[1;30m][0m 
+[1;30m[ [0m[1;34minfinity0 [0m[1;30m][0m [1;30m[ [0m[1;34mBashmetim [0m[1;30m][0m [1;30m[ [0m[1;34manodium   [0m[1;30m][0m [1;30m[ [0m[1;34mzcourts_  [0m[1;30m][0m [1;30m[ [0m[1;34mrkazak    [0m[1;30m][0m 
+[1;30m[ [0m[1;34malveric2  [0m[1;30m][0m [1;30m[ [0m[1;34mnakal     [0m[1;30m][0m [1;30m[ [0m[1;34mNeverDie  [0m[1;30m][0m [1;30m[ [0m[1;34mRotaerk   [0m[1;30m][0m [1;30m[ [0m[1;34mdsfox     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mludat     [0m[1;30m][0m [1;30m[ [0m[1;34mtwomix    [0m[1;30m][0m [1;30m[ [0m[1;34mmarkus1219[0m[1;30m][0m [1;30m[ [0m[1;34mmarkus1209[0m[1;30m][0m [1;30m[ [0m[1;34mJesin     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtheDon    [0m[1;30m][0m [1;30m[ [0m[1;34mSkyPatrol [0m[1;30m][0m [1;30m[ [0m[1;34msystemfaul[0m[1;30m][0m [1;30m[ [0m[1;34mcpenningto[0m[1;30m][0m [1;30m[ [0m[1;34mjmcarthur [0m[1;30m][0m 
+[1;30m[ [0m[1;34mthimoteus [0m[1;30m][0m [1;30m[ [0m[1;34mreptar_   [0m[1;30m][0m [1;30m[ [0m[1;34mlambda_foo[0m[1;30m][0m [1;30m[ [0m[1;34mnoumenon  [0m[1;30m][0m [1;30m[ [0m[1;34mSgeo      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mhiratara  [0m[1;30m][0m [1;30m[ [0m[1;34myrid      [0m[1;30m][0m [1;30m[ [0m[1;34mrblaze1   [0m[1;30m][0m [1;30m[ [0m[1;34malx741    [0m[1;30m][0m [1;30m[ [0m[1;34matk       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mertes     [0m[1;30m][0m [1;30m[ [0m[1;34mMichaelBur[0m[1;30m][0m [1;30m[ [0m[1;34mixian     [0m[1;30m][0m [1;30m[ [0m[1;34mmattp_    [0m[1;30m][0m [1;30m[ [0m[1;34mdfeuer    [0m[1;30m][0m 
+[1;30m[ [0m[1;34maugur     [0m[1;30m][0m [1;30m[ [0m[1;34mtaksuyu   [0m[1;30m][0m [1;30m[ [0m[1;34mMoyst     [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m59[1;30m/[0;32m59[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mpie_      [0m[1;30m][0m [1;30m[ [0m[1;34mmrd1      [0m[1;30m][0m [1;30m[ [0m[1;34mrbocquet  [0m[1;30m][0m [1;30m[ [0m[1;34msproingie [0m[1;30m][0m [1;30m[ [0m[1;34msafe      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrom1504   [0m[1;30m][0m [1;30m[ [0m[1;34mtristanp  [0m[1;30m][0m [1;30m[ [0m[1;34mzv        [0m[1;30m][0m [1;30m[ [0m[1;34mnwf       [0m[1;30m][0m [1;30m[ [0m[1;34mrafaelcgs1[0m[1;30m][0m 
+[1;30m[ [0m[1;34marmyriad  [0m[1;30m][0m [1;30m[ [0m[1;34mikke      [0m[1;30m][0m [1;30m[ [0m[1;34mDerbycat  [0m[1;30m][0m [1;30m[ [0m[1;34mjrp6      [0m[1;30m][0m [1;30m[ [0m[1;34mjaj       [0m[1;30m][0m 
+[1;30m[ [0m[1;34meschnett  [0m[1;30m][0m [1;30m[ [0m[1;34manemecek  [0m[1;30m][0m [1;30m[ [0m[1;34mprkc      [0m[1;30m][0m [1;30m[ [0m[1;34moberstein [0m[1;30m][0m [1;30m[ [0m[1;34mjames999  [0m[1;30m][0m 
+[1;30m[ [0m[1;34m`Guest0000[0m[1;30m][0m [1;30m[ [0m[1;34mbs        [0m[1;30m][0m [1;30m[ [0m[1;34mlaplacian [0m[1;30m][0m [1;30m[ [0m[1;34mandyo     [0m[1;30m][0m [1;30m[ [0m[1;34mcastlelore[0m[1;30m][0m 
+[1;30m[ [0m[1;34mraynold   [0m[1;30m][0m [1;30m[ [0m[1;34mprefork   [0m[1;30m][0m [1;30m[ [0m[1;34mfingerzam [0m[1;30m][0m [1;30m[ [0m[1;34mafcondon_ [0m[1;30m][0m [1;30m[ [0m[1;34mjcp___    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mScorchin  [0m[1;30m][0m [1;30m[ [0m[1;34mdrcode    [0m[1;30m][0m [1;30m[ [0m[1;34mtg        [0m[1;30m][0m [1;30m[ [0m[1;34myellowj   [0m[1;30m][0m [1;30m[ [0m[1;34macertain  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mint0x27h  [0m[1;30m][0m [1;30m[ [0m[1;34mdavean    [0m[1;30m][0m [1;30m[ [0m[1;34mnullifidia[0m[1;30m][0m [1;30m[ [0m[1;34mdescender [0m[1;30m][0m [1;30m[ [0m[1;34mElhamer   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mpera      [0m[1;30m][0m [1;30m[ [0m[1;34mlieven    [0m[1;30m][0m [1;30m[ [0m[1;34mkrazedkat [0m[1;30m][0m [1;30m[ [0m[1;34msirreal   [0m[1;30m][0m [1;30m[ [0m[1;34mctag      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mafldcr    [0m[1;30m][0m [1;30m[ [0m[1;34mgawen     [0m[1;30m][0m [1;30m[ [0m[1;34mosa1      [0m[1;30m][0m [1;30m[ [0m[1;34maraujo    [0m[1;30m][0m [1;30m[ [0m[1;34mmada      [0m[1;30m][0m 
+[1;30m[ [0m[1;34murodna    [0m[1;30m][0m [1;30m[ [0m[1;34mtheelous3 [0m[1;30m][0m [1;30m[ [0m[1;34mmgttlinger[0m[1;30m][0m [1;30m[ [0m[1;34mSuperTux88[0m[1;30m][0m [1;30m[ [0m[1;34mnikolah   [0m[1;30m][0m 
+[1;30m[ [0m[1;34migniting  [0m[1;30m][0m [1;30m[ [0m[1;34mthunderrd [0m[1;30m][0m [1;30m[ [0m[1;34mnglsr     [0m[1;30m][0m [1;30m[ [0m[1;34mpeterhil  [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m56[1;30m/[0;32m56[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mplutoniix [0m[1;30m][0m [1;30m[ [0m[1;34mKhisanth  [0m[1;30m][0m [1;30m[ [0m[1;34mxanadu    [0m[1;30m][0m [1;30m[ [0m[1;34mdavr0s    [0m[1;30m][0m [1;30m[ [0m[1;34mtjbp      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mNatch     [0m[1;30m][0m [1;30m[ [0m[1;34mmagthe    [0m[1;30m][0m [1;30m[ [0m[1;34mtaktoa    [0m[1;30m][0m [1;30m[ [0m[1;34msdothum   [0m[1;30m][0m [1;30m[ [0m[1;34mcheater   [0m[1;30m][0m 
+[1;30m[ [0m[1;34m__paul0   [0m[1;30m][0m [1;30m[ [0m[1;34mbeerdrop  [0m[1;30m][0m [1;30m[ [0m[1;34mSnircle   [0m[1;30m][0m [1;30m[ [0m[1;34mgmcabrita [0m[1;30m][0m [1;30m[ [0m[1;34mlopex     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mslomo     [0m[1;30m][0m [1;30m[ [0m[1;34mericsagnes[0m[1;30m][0m [1;30m[ [0m[1;34mtabaqui   [0m[1;30m][0m [1;30m[ [0m[1;34msz0       [0m[1;30m][0m [1;30m[ [0m[1;34mlep-delete[0m[1;30m][0m 
+[1;30m[ [0m[1;34meyck      [0m[1;30m][0m [1;30m[ [0m[1;34mquobo     [0m[1;30m][0m [1;30m[ [0m[1;34mjtobin    [0m[1;30m][0m [1;30m[ [0m[1;34mCurryWurst[0m[1;30m][0m [1;30m[ [0m[1;34mwedens    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mlassulus  [0m[1;30m][0m [1;30m[ [0m[1;34m^jud      [0m[1;30m][0m [1;30m[ [0m[1;34mfrontendlo[0m[1;30m][0m [1;30m[ [0m[1;34mvimalloc  [0m[1;30m][0m [1;30m[ [0m[1;34myobohohoz [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmjo       [0m[1;30m][0m [1;30m[ [0m[1;34mBigcheese [0m[1;30m][0m [1;30m[ [0m[1;34mhamishmack[0m[1;30m][0m [1;30m[ [0m[1;34msolatis   [0m[1;30m][0m [1;30m[ [0m[1;34mmiklcct   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mvikraman  [0m[1;30m][0m [1;30m[ [0m[1;34mmicmus    [0m[1;30m][0m [1;30m[ [0m[1;34mhanna     [0m[1;30m][0m [1;30m[ [0m[1;34mmeandi    [0m[1;30m][0m [1;30m[ [0m[1;34mjosh5tone [0m[1;30m][0m 
+[1;30m[ [0m[1;34mgeekosaur [0m[1;30m][0m [1;30m[ [0m[1;34mLeCamarade[0m[1;30m][0m [1;30m[ [0m[1;34mfkurkows1 [0m[1;30m][0m [1;30m[ [0m[1;34motto_s    [0m[1;30m][0m [1;30m[ [0m[1;34mcarlomagno[0m[1;30m][0m 
+[1;30m[ [0m[1;34mMaxdamantu[0m[1;30m][0m [1;30m[ [0m[1;34mLokathor  [0m[1;30m][0m [1;30m[ [0m[1;34melectrosta[0m[1;30m][0m [1;30m[ [0m[1;34m_kit_     [0m[1;30m][0m [1;30m[ [0m[1;34mbrynedward[0m[1;30m][0m 
+[1;30m[ [0m[1;34mknapptime [0m[1;30m][0m [1;30m[ [0m[1;34morion     [0m[1;30m][0m [1;30m[ [0m[1;34mCale      [0m[1;30m][0m [1;30m[ [0m[1;34mlknows    [0m[1;30m][0m [1;30m[ [0m[1;34maib       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mshesek    [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m57[1;30m/[0;32m57[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mverement  [0m[1;30m][0m [1;30m[ [0m[1;34mdsfox1    [0m[1;30m][0m [1;30m[ [0m[1;34mtroydm    [0m[1;30m][0m [1;30m[ [0m[1;34mryantm    [0m[1;30m][0m [1;30m[ [0m[1;34mirco      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdalek_    [0m[1;30m][0m [1;30m[ [0m[1;34mgrumble   [0m[1;30m][0m [1;30m[ [0m[1;34mtheorbtwo [0m[1;30m][0m [1;30m[ [0m[1;34mRGamma    [0m[1;30m][0m [1;30m[ [0m[1;34merikd     [0m[1;30m][0m 
+[1;30m[ [0m[1;34msqrt2     [0m[1;30m][0m [1;30m[ [0m[1;34mobadz     [0m[1;30m][0m [1;30m[ [0m[1;34mjbalint   [0m[1;30m][0m [1;30m[ [0m[1;34msw1nn     [0m[1;30m][0m [1;30m[ [0m[1;34mexarkun   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbsmt      [0m[1;30m][0m [1;30m[ [0m[1;34mtorstein  [0m[1;30m][0m [1;30m[ [0m[1;34mbsermons  [0m[1;30m][0m [1;30m[ [0m[1;34mbloogie   [0m[1;30m][0m [1;30m[ [0m[1;34mMonoide   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mLHoT10820 [0m[1;30m][0m [1;30m[ [0m[1;34moleks     [0m[1;30m][0m [1;30m[ [0m[1;34mCosmicRay [0m[1;30m][0m [1;30m[ [0m[1;34mnumberten [0m[1;30m][0m [1;30m[ [0m[1;34mpsmolen   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mslackman  [0m[1;30m][0m [1;30m[ [0m[1;34mNik05     [0m[1;30m][0m [1;30m[ [0m[1;34mfbergmann [0m[1;30m][0m [1;30m[ [0m[1;34mmonty     [0m[1;30m][0m [1;30m[ [0m[1;34mtomjaguarp[0m[1;30m][0m 
+[1;30m[ [0m[1;34mjdnavarro [0m[1;30m][0m [1;30m[ [0m[1;34mStoneToad [0m[1;30m][0m [1;30m[ [0m[1;34mhjklhjklhj[0m[1;30m][0m [1;30m[ [0m[1;34mtctara_   [0m[1;30m][0m [1;30m[ [0m[1;34mmitchty   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mgnull     [0m[1;30m][0m [1;30m[ [0m[1;34mShatnerz0 [0m[1;30m][0m [1;30m[ [0m[1;34mjdt       [0m[1;30m][0m [1;30m[ [0m[1;34mdcoutts   [0m[1;30m][0m [1;30m[ [0m[1;34mBhootrk_  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mshadowdaem[0m[1;30m][0m [1;30m[ [0m[1;34mtusj      [0m[1;30m][0m [1;30m[ [0m[1;34masciiascet[0m[1;30m][0m [1;30m[ [0m[1;34mjchia_1   [0m[1;30m][0m [1;30m[ [0m[1;34mbluepixel [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtortal    [0m[1;30m][0m [1;30m[ [0m[1;34mwhiteline [0m[1;30m][0m [1;30m[ [0m[1;34mnesqi     [0m[1;30m][0m [1;30m[ [0m[1;34mtumdedum  [0m[1;30m][0m [1;30m[ [0m[1;34mLnL       [0m[1;30m][0m 
+[1;30m[ [0m[1;34med-ilyin-l[0m[1;30m][0m [1;30m[ [0m[1;34mjophish   [0m[1;30m][0m [1;30m[ [0m[1;34mrossberg  [0m[1;30m][0m [1;30m[ [0m[1;34mmzf       [0m[1;30m][0m [1;30m[ [0m[1;34mdmiles    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mstarmix   [0m[1;30m][0m [1;30m[ [0m[1;34mjchia     [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m57[1;30m/[0;32m57[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mpikajude  [0m[1;30m][0m [1;30m[ [0m[1;34mniko      [0m[1;30m][0m [1;30m[ [0m[1;34mzeroed    [0m[1;30m][0m [1;30m[ [0m[1;34mdsantiago [0m[1;30m][0m [1;30m[ [0m[1;34mliste     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mFubar^    [0m[1;30m][0m [1;30m[ [0m[1;34mathan     [0m[1;30m][0m [1;30m[ [0m[1;34mmikeplus64[0m[1;30m][0m [1;30m[ [0m[1;34manhduy    [0m[1;30m][0m [1;30m[ [0m[1;34mjimmyrcom [0m[1;30m][0m 
+[1;30m[ [0m[1;34mRalith_   [0m[1;30m][0m [1;30m[ [0m[1;34mdfranke   [0m[1;30m][0m [1;30m[ [0m[1;34mburp      [0m[1;30m][0m [1;30m[ [0m[1;34mpranz4    [0m[1;30m][0m [1;30m[ [0m[1;34mofdm      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mHithroc   [0m[1;30m][0m [1;30m[ [0m[1;34mdfordivam [0m[1;30m][0m [1;30m[ [0m[1;34mi-amd3    [0m[1;30m][0m [1;30m[ [0m[1;34mMasseR    [0m[1;30m][0m [1;30m[ [0m[1;34mTesseracti[0m[1;30m][0m 
+[1;30m[ [0m[1;34mbydo      [0m[1;30m][0m [1;30m[ [0m[1;34mShatnerz  [0m[1;30m][0m [1;30m[ [0m[1;34mult       [0m[1;30m][0m [1;30m[ [0m[1;34mPlasmaStar[0m[1;30m][0m [1;30m[ [0m[1;34mquuxman   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mc-rog     [0m[1;30m][0m [1;30m[ [0m[1;34mmonochrom [0m[1;30m][0m [1;30m[ [0m[1;34mniklasb   [0m[1;30m][0m [1;30m[ [0m[1;34mxxpor     [0m[1;30m][0m [1;30m[ [0m[1;34msdrodge   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mAdios     [0m[1;30m][0m [1;30m[ [0m[1;34mbsima     [0m[1;30m][0m [1;30m[ [0m[1;34mZowlyfon  [0m[1;30m][0m [1;30m[ [0m[1;34mpadre_ango[0m[1;30m][0m [1;30m[ [0m[1;34mhenrytill_[0m[1;30m][0m 
+[1;30m[ [0m[1;34mbencryptio[0m[1;30m][0m [1;30m[ [0m[1;34ma3f_      [0m[1;30m][0m [1;30m[ [0m[1;34mparsnip   [0m[1;30m][0m [1;30m[ [0m[1;34mdjanatyn1 [0m[1;30m][0m [1;30m[ [0m[1;34md3lxa     [0m[1;30m][0m 
+[1;30m[ [0m[1;34meyen_     [0m[1;30m][0m [1;30m[ [0m[1;34mnurupo    [0m[1;30m][0m [1;30m[ [0m[1;34mGuest82871[0m[1;30m][0m [1;30m[ [0m[1;34mvili      [0m[1;30m][0m [1;30m[ [0m[1;34mdmwit     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mreinh1    [0m[1;30m][0m [1;30m[ [0m[1;34mjulmac    [0m[1;30m][0m [1;30m[ [0m[1;34mjameseb   [0m[1;30m][0m [1;30m[ [0m[1;34mj_king_   [0m[1;30m][0m [1;30m[ [0m[1;34mbetawaffle[0m[1;30m][0m 
+[1;30m[ [0m[1;34muelen     [0m[1;30m][0m [1;30m[ [0m[1;34mMyrl-saki [0m[1;30m][0m [1;30m[ [0m[1;34mRabbit_   [0m[1;30m][0m [1;30m[ [0m[1;34mbaroncha1l[0m[1;30m][0m [1;30m[ [0m[1;34mnocookie19[0m[1;30m][0m 
+[1;30m[ [0m[1;34mbarrucadu [0m[1;30m][0m [1;30m[ [0m[1;34m\u        [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m53[1;30m/[0;32m53[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mjoeytwiddl[0m[1;30m][0m [1;30m[ [0m[1;34mimplementa[0m[1;30m][0m [1;30m[ [0m[1;34mmikecaruso[0m[1;30m][0m [1;30m[ [0m[1;34mjrm       [0m[1;30m][0m [1;30m[ [0m[1;34mImmune_   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mchrissl   [0m[1;30m][0m [1;30m[ [0m[1;34mmbrcknl   [0m[1;30m][0m [1;30m[ [0m[1;34mdarthThori[0m[1;30m][0m [1;30m[ [0m[1;34mmsks      [0m[1;30m][0m [1;30m[ [0m[1;34mClaudiusMa[0m[1;30m][0m 
+[1;30m[ [0m[1;34moakley91  [0m[1;30m][0m [1;30m[ [0m[1;34mfalafel   [0m[1;30m][0m [1;30m[ [0m[1;34mjmnoz[m]  [0m[1;30m][0m [1;30m[ [0m[1;34mnick2000  [0m[1;30m][0m [1;30m[ [0m[1;34mTesX[m]   [0m[1;30m][0m 
+[1;30m[ [0m[1;34maspiwack[m[0m[1;30m][0m [1;30m[ [0m[1;34mNaughtmare[0m[1;30m][0m [1;30m[ [0m[1;34mpellegrino[0m[1;30m][0m [1;30m[ [0m[1;34mzar[m]    [0m[1;30m][0m [1;30m[ [0m[1;34mchrzyki   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mhakan[m]  [0m[1;30m][0m [1;30m[ [0m[1;34miomonad   [0m[1;30m][0m [1;30m[ [0m[1;34mmdarse    [0m[1;30m][0m [1;30m[ [0m[1;34mswalladge [0m[1;30m][0m [1;30m[ [0m[1;34myushyin   [0m[1;30m][0m 
+[1;30m[ [0m[1;34manzuof    [0m[1;30m][0m [1;30m[ [0m[1;34mgreeny    [0m[1;30m][0m [1;30m[ [0m[1;34mnille     [0m[1;30m][0m [1;30m[ [0m[1;34micedev    [0m[1;30m][0m [1;30m[ [0m[1;34ment       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mAkii      [0m[1;30m][0m [1;30m[ [0m[1;34mSomeguy123[0m[1;30m][0m [1;30m[ [0m[1;34makermu    [0m[1;30m][0m [1;30m[ [0m[1;34musr       [0m[1;30m][0m [1;30m[ [0m[1;34mdefanor   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mzennist   [0m[1;30m][0m [1;30m[ [0m[1;34mdersquishe[0m[1;30m][0m [1;30m[ [0m[1;34mCthalupa  [0m[1;30m][0m [1;30m[ [0m[1;34mIeuan     [0m[1;30m][0m [1;30m[ [0m[1;34mmax-m     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mx1n4u     [0m[1;30m][0m [1;30m[ [0m[1;34mjtcs_     [0m[1;30m][0m [1;30m[ [0m[1;34mambrosia  [0m[1;30m][0m [1;30m[ [0m[1;34mhuonw_    [0m[1;30m][0m [1;30m[ [0m[1;34mtibbe_    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mstefan-   [0m[1;30m][0m [1;30m[ [0m[1;34mjapesinato[0m[1;30m][0m [1;30m[ [0m[1;34mByronJoh1s[0m[1;30m][0m [1;30m[ [0m[1;34mM2tias    [0m[1;30m][0m [1;30m[ [0m[1;34mChewieBe1r[0m[1;30m][0m 
+[1;30m[ [0m[1;34mjix       [0m[1;30m][0m [1;30m[ [0m[1;34mintegral_ [0m[1;30m][0m [1;30m[ [0m[1;34mcow-orke1 [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m56[1;30m/[0;32m56[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mjotrk_    [0m[1;30m][0m [1;30m[ [0m[1;34mhyPiRion_ [0m[1;30m][0m [1;30m[ [0m[1;34mdilinger_ [0m[1;30m][0m [1;30m[ [0m[1;34mraek      [0m[1;30m][0m [1;30m[ [0m[1;34mcjay_     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mJaak_     [0m[1;30m][0m [1;30m[ [0m[1;34mVq        [0m[1;30m][0m [1;30m[ [0m[1;34mturnage_  [0m[1;30m][0m [1;30m[ [0m[1;34mraatiniemi[0m[1;30m][0m [1;30m[ [0m[1;34mRandy     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmarcel    [0m[1;30m][0m [1;30m[ [0m[1;34mbweston92 [0m[1;30m][0m [1;30m[ [0m[1;34mmikedlr   [0m[1;30m][0m [1;30m[ [0m[1;34mjfokkan__ [0m[1;30m][0m [1;30m[ [0m[1;34mrann      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mcodedmart [0m[1;30m][0m [1;30m[ [0m[1;34mthoughtpol[0m[1;30m][0m [1;30m[ [0m[1;34mRumia_    [0m[1;30m][0m [1;30m[ [0m[1;34mmauke     [0m[1;30m][0m [1;30m[ [0m[1;34minr       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mflux      [0m[1;30m][0m [1;30m[ [0m[1;34mabbe      [0m[1;30m][0m [1;30m[ [0m[1;34mkadoban   [0m[1;30m][0m [1;30m[ [0m[1;34mChongLi   [0m[1;30m][0m [1;30m[ [0m[1;34mseagreen  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mij        [0m[1;30m][0m [1;30m[ [0m[1;34mcarlosda1 [0m[1;30m][0m [1;30m[ [0m[1;34mpikhq     [0m[1;30m][0m [1;30m[ [0m[1;34mdcoutts_  [0m[1;30m][0m [1;30m[ [0m[1;34mpermagreen[0m[1;30m][0m 
+[1;30m[ [0m[1;34mRaptor8m3 [0m[1;30m][0m [1;30m[ [0m[1;34mhvr       [0m[1;30m][0m [1;30m[ [0m[1;34mcatsup    [0m[1;30m][0m [1;30m[ [0m[1;34m__main__  [0m[1;30m][0m [1;30m[ [0m[1;34mxinming   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mLuckyRawAp[0m[1;30m][0m [1;30m[ [0m[1;34mshutdown_-[0m[1;30m][0m [1;30m[ [0m[1;34mmivael    [0m[1;30m][0m [1;30m[ [0m[1;34mrodlogic  [0m[1;30m][0m [1;30m[ [0m[1;34mwonko7    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkneit     [0m[1;30m][0m [1;30m[ [0m[1;34mSCHAPiE   [0m[1;30m][0m [1;30m[ [0m[1;34mrntz      [0m[1;30m][0m [1;30m[ [0m[1;34mninedotnin[0m[1;30m][0m [1;30m[ [0m[1;34mseanparson[0m[1;30m][0m 
+[1;30m[ [0m[1;34mchlong    [0m[1;30m][0m [1;30m[ [0m[1;34mgienah_   [0m[1;30m][0m [1;30m[ [0m[1;34mzaltekk   [0m[1;30m][0m [1;30m[ [0m[1;34mAxman6    [0m[1;30m][0m [1;30m[ [0m[1;34mredfish64 [0m[1;30m][0m 
+[1;30m[ [0m[1;34mAntiSpamMe[0m[1;30m][0m [1;30m[ [0m[1;34mint-e     [0m[1;30m][0m [1;30m[ [0m[1;34mlambdabot [0m[1;30m][0m [1;30m[ [0m[1;34mwilornel  [0m[1;30m][0m [1;30m[ [0m[1;34mbshelden  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mKuros`    [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m56[1;30m/[0;32m56[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34ma3Dman    [0m[1;30m][0m [1;30m[ [0m[1;34mcentril   [0m[1;30m][0m [1;30m[ [0m[1;34mtsahyt    [0m[1;30m][0m [1;30m[ [0m[1;34mstoopkid  [0m[1;30m][0m [1;30m[ [0m[1;34malanxoc3  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mHappyEnte [0m[1;30m][0m [1;30m[ [0m[1;34mmulk      [0m[1;30m][0m [1;30m[ [0m[1;34mPilfers   [0m[1;30m][0m [1;30m[ [0m[1;34mmadknight [0m[1;30m][0m [1;30m[ [0m[1;34m_ashbreeze[0m[1;30m][0m 
+[1;30m[ [0m[1;34mdibblego  [0m[1;30m][0m [1;30m[ [0m[1;34mego       [0m[1;30m][0m [1;30m[ [0m[1;34mOnkelTem  [0m[1;30m][0m [1;30m[ [0m[1;34mmachinedgo[0m[1;30m][0m [1;30m[ [0m[1;34mmyfreeweb [0m[1;30m][0m 
+[1;30m[ [0m[1;34mXandaros  [0m[1;30m][0m [1;30m[ [0m[1;34mmartingale[0m[1;30m][0m [1;30m[ [0m[1;34mXnuk      [0m[1;30m][0m [1;30m[ [0m[1;34mzaquest   [0m[1;30m][0m [1;30m[ [0m[1;34mM-wamaral [0m[1;30m][0m 
+[1;30m[ [0m[1;34m_flow_    [0m[1;30m][0m [1;30m[ [0m[1;34mAPic      [0m[1;30m][0m [1;30m[ [0m[1;34mlitchblade[0m[1;30m][0m [1;30m[ [0m[1;34mSuprDewd  [0m[1;30m][0m [1;30m[ [0m[1;34munsymbol  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mhpd_m     [0m[1;30m][0m [1;30m[ [0m[1;34mnoan_     [0m[1;30m][0m [1;30m[ [0m[1;34matomi     [0m[1;30m][0m [1;30m[ [0m[1;34mWamanuz   [0m[1;30m][0m [1;30m[ [0m[1;34mTazca     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrunde     [0m[1;30m][0m [1;30m[ [0m[1;34mSigyn     [0m[1;30m][0m [1;30m[ [0m[1;34myrdz      [0m[1;30m][0m [1;30m[ [0m[1;34mProteus   [0m[1;30m][0m [1;30m[ [0m[1;34mkantokomi [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtobiasBora[0m[1;30m][0m [1;30m[ [0m[1;34mvalkyr2e  [0m[1;30m][0m [1;30m[ [0m[1;34maloiscocha[0m[1;30m][0m [1;30m[ [0m[1;34mmichi7x7_ [0m[1;30m][0m [1;30m[ [0m[1;34mswistak35 [0m[1;30m][0m 
+[1;30m[ [0m[1;34mph88^     [0m[1;30m][0m [1;30m[ [0m[1;34mkolko     [0m[1;30m][0m [1;30m[ [0m[1;34mhackage   [0m[1;30m][0m [1;30m[ [0m[1;34mguillaum2 [0m[1;30m][0m [1;30m[ [0m[1;34malbel727  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mfoolswoo1 [0m[1;30m][0m [1;30m[ [0m[1;34mGGMethos  [0m[1;30m][0m [1;30m[ [0m[1;34mseliopou  [0m[1;30m][0m [1;30m[ [0m[1;34mortmage   [0m[1;30m][0m [1;30m[ [0m[1;34mqlkzy     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mscopedTV  [0m[1;30m][0m [1;30m[ [0m[1;34mPhilonous [0m[1;30m][0m [1;30m[ [0m[1;34mscav      [0m[1;30m][0m [1;30m[ [0m[1;34makemot    [0m[1;30m][0m [1;30m[ [0m[1;34mljhms     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mopios     [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m57[1;30m/[0;32m57[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mkgadek    [0m[1;30m][0m [1;30m[ [0m[1;34mNocnaShada[0m[1;30m][0m [1;30m[ [0m[1;34mBlkt      [0m[1;30m][0m [1;30m[ [0m[1;34mjle`      [0m[1;30m][0m [1;30m[ [0m[1;34motulp     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mFrans-Will[0m[1;30m][0m [1;30m[ [0m[1;34mogkloo    [0m[1;30m][0m [1;30m[ [0m[1;34mjabbslad  [0m[1;30m][0m [1;30m[ [0m[1;34mpeteretep [0m[1;30m][0m [1;30m[ [0m[1;34msbauman   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mgridaphobe[0m[1;30m][0m [1;30m[ [0m[1;34mspinda    [0m[1;30m][0m [1;30m[ [0m[1;34mrlr       [0m[1;30m][0m [1;30m[ [0m[1;34mstig      [0m[1;30m][0m [1;30m[ [0m[1;34mTritlo    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmpickering[0m[1;30m][0m [1;30m[ [0m[1;34mdrewr     [0m[1;30m][0m [1;30m[ [0m[1;34mlexi-lambd[0m[1;30m][0m [1;30m[ [0m[1;34mmw        [0m[1;30m][0m [1;30m[ [0m[1;34mKlumben   [0m[1;30m][0m 
+[1;30m[ [0m[1;34malem0lars [0m[1;30m][0m [1;30m[ [0m[1;34mArgorok   [0m[1;30m][0m [1;30m[ [0m[1;34mu-ou      [0m[1;30m][0m [1;30m[ [0m[1;34mredcedar  [0m[1;30m][0m [1;30m[ [0m[1;34mwenzowski [0m[1;30m][0m 
+[1;30m[ [0m[1;34mMorTal1ty [0m[1;30m][0m [1;30m[ [0m[1;34msolidsnack[0m[1;30m][0m [1;30m[ [0m[1;34msimony    [0m[1;30m][0m [1;30m[ [0m[1;34mGuest37310[0m[1;30m][0m [1;30m[ [0m[1;34mLeaChim   [0m[1;30m][0m 
+[1;30m[ [0m[1;34m`micro    [0m[1;30m][0m [1;30m[ [0m[1;34mstatusfail[0m[1;30m][0m [1;30m[ [0m[1;34mrellen    [0m[1;30m][0m [1;30m[ [0m[1;34mcmdv      [0m[1;30m][0m [1;30m[ [0m[1;34mkiltzman  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbkonkle   [0m[1;30m][0m [1;30m[ [0m[1;34makl       [0m[1;30m][0m [1;30m[ [0m[1;34mtuturto   [0m[1;30m][0m [1;30m[ [0m[1;34mg4k       [0m[1;30m][0m [1;30m[ [0m[1;34mhydraz    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdmj`      [0m[1;30m][0m [1;30m[ [0m[1;34mxacktm    [0m[1;30m][0m [1;30m[ [0m[1;34mfrew      [0m[1;30m][0m [1;30m[ [0m[1;34mxplat|work[0m[1;30m][0m [1;30m[ [0m[1;34mUnode     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mheyj      [0m[1;30m][0m [1;30m[ [0m[1;34mrichi235  [0m[1;30m][0m [1;30m[ [0m[1;34mcchalmers [0m[1;30m][0m [1;30m[ [0m[1;34mQoMe      [0m[1;30m][0m [1;30m[ [0m[1;34mjelleke   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbgamari   [0m[1;30m][0m [1;30m[ [0m[1;34mSose      [0m[1;30m][0m [1;30m[ [0m[1;34mNinjaTrapp[0m[1;30m][0m [1;30m[ [0m[1;34mnoplamodo [0m[1;30m][0m [1;30m[ [0m[1;34mjinblack  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mcschneid  [0m[1;30m][0m [1;30m[ [0m[1;34mthroughnot[0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m57[1;30m/[0;32m57[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34morcus     [0m[1;30m][0m [1;30m[ [0m[1;34mcarc      [0m[1;30m][0m [1;30m[ [0m[1;34mNycatelos [0m[1;30m][0m [1;30m[ [0m[1;34mbeaky     [0m[1;30m][0m [1;30m[ [0m[1;34mzachary12 [0m[1;30m][0m 
+[1;30m[ [0m[1;34mnoam_     [0m[1;30m][0m [1;30m[ [0m[1;34mbd_       [0m[1;30m][0m [1;30m[ [0m[1;34malasi     [0m[1;30m][0m [1;30m[ [0m[1;34mPtival    [0m[1;30m][0m [1;30m[ [0m[1;34mclamchowde[0m[1;30m][0m 
+[1;30m[ [0m[1;34mniteria   [0m[1;30m][0m [1;30m[ [0m[1;34mnoxd      [0m[1;30m][0m [1;30m[ [0m[1;34mkfish     [0m[1;30m][0m [1;30m[ [0m[1;34mjohnw     [0m[1;30m][0m [1;30m[ [0m[1;34mgcross    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mMindlessDr[0m[1;30m][0m [1;30m[ [0m[1;34mdschoepe  [0m[1;30m][0m [1;30m[ [0m[1;34mCrazedProg[0m[1;30m][0m [1;30m[ [0m[1;34mTallerGhos[0m[1;30m][0m [1;30m[ [0m[1;34mysangkok  [0m[1;30m][0m 
+[1;30m[ [0m[1;34melectrocat[0m[1;30m][0m [1;30m[ [0m[1;34mRing0`    [0m[1;30m][0m [1;30m[ [0m[1;34mhpc       [0m[1;30m][0m [1;30m[ [0m[1;34mtv        [0m[1;30m][0m [1;30m[ [0m[1;34mfeatherles[0m[1;30m][0m 
+[1;30m[ [0m[1;34mspoonm    [0m[1;30m][0m [1;30m[ [0m[1;34mzipper    [0m[1;30m][0m [1;30m[ [0m[1;34mgregoire  [0m[1;30m][0m [1;30m[ [0m[1;34mSoupEvil  [0m[1;30m][0m [1;30m[ [0m[1;34mmalthe    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mnoexcept  [0m[1;30m][0m [1;30m[ [0m[1;34mlpaste    [0m[1;30m][0m [1;30m[ [0m[1;34mgothos    [0m[1;30m][0m [1;30m[ [0m[1;34msigmundv  [0m[1;30m][0m [1;30m[ [0m[1;34mploop     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mTharbakim [0m[1;30m][0m [1;30m[ [0m[1;34mroot_____ [0m[1;30m][0m [1;30m[ [0m[1;34mFreundlich[0m[1;30m][0m [1;30m[ [0m[1;34mgiraffe   [0m[1;30m][0m [1;30m[ [0m[1;34mcjwelborn [0m[1;30m][0m 
+[1;30m[ [0m[1;34mhive-mind [0m[1;30m][0m [1;30m[ [0m[1;34moldsk00l  [0m[1;30m][0m [1;30m[ [0m[1;34m`0660     [0m[1;30m][0m [1;30m[ [0m[1;34mFairy     [0m[1;30m][0m [1;30m[ [0m[1;34mmrus      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mzomg      [0m[1;30m][0m [1;30m[ [0m[1;34mKe        [0m[1;30m][0m [1;30m[ [0m[1;34mblackdog  [0m[1;30m][0m [1;30m[ [0m[1;34mSlashLife [0m[1;30m][0m [1;30m[ [0m[1;34mn1        [0m[1;30m][0m 
+[1;30m[ [0m[1;34mIanKelling[0m[1;30m][0m [1;30m[ [0m[1;34mteto      [0m[1;30m][0m [1;30m[ [0m[1;34mnavilan   [0m[1;30m][0m [1;30m[ [0m[1;34msolution_ [0m[1;30m][0m [1;30m[ [0m[1;34mNikotiini [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkefin     [0m[1;30m][0m [1;30m[ [0m[1;34mkyagrd    [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m57[1;30m/[0;32m57[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mtwold     [0m[1;30m][0m [1;30m[ [0m[1;34mLogio     [0m[1;30m][0m [1;30m[ [0m[1;34mjzelinskie[0m[1;30m][0m [1;30m[ [0m[1;34mfeltnerm  [0m[1;30m][0m [1;30m[ [0m[1;34mtarcwynne_[0m[1;30m][0m 
+[1;30m[ [0m[1;34msophiag   [0m[1;30m][0m [1;30m[ [0m[1;34mFrankablu [0m[1;30m][0m [1;30m[ [0m[1;34mbillstclai[0m[1;30m][0m [1;30m[ [0m[1;34mmetalrain [0m[1;30m][0m [1;30m[ [0m[1;34mjwbuurlage[0m[1;30m][0m 
+[1;30m[ [0m[1;34mhansihe   [0m[1;30m][0m [1;30m[ [0m[1;34msuppi     [0m[1;30m][0m [1;30m[ [0m[1;34mzgrepc    [0m[1;30m][0m [1;30m[ [0m[1;34mprizim    [0m[1;30m][0m [1;30m[ [0m[1;34mwyvern    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmbrock    [0m[1;30m][0m [1;30m[ [0m[1;34mCARAM__   [0m[1;30m][0m [1;30m[ [0m[1;34mericbmerri[0m[1;30m][0m [1;30m[ [0m[1;34mcstrahan  [0m[1;30m][0m [1;30m[ [0m[1;34mocharles  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mandrew__n_[0m[1;30m][0m [1;30m[ [0m[1;34mFrankZappa[0m[1;30m][0m [1;30m[ [0m[1;34mjmct      [0m[1;30m][0m [1;30m[ [0m[1;34mearthy    [0m[1;30m][0m [1;30m[ [0m[1;34mReisen    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmonad_cat [0m[1;30m][0m [1;30m[ [0m[1;34mSaizan    [0m[1;30m][0m [1;30m[ [0m[1;34mFord_Prefe[0m[1;30m][0m [1;30m[ [0m[1;34msupki     [0m[1;30m][0m [1;30m[ [0m[1;34mTwey      [0m[1;30m][0m 
+[1;30m[ [0m[1;34madelbertc [0m[1;30m][0m [1;30m[ [0m[1;34mbengt_    [0m[1;30m][0m [1;30m[ [0m[1;34mkillthelit[0m[1;30m][0m [1;30m[ [0m[1;34mahf       [0m[1;30m][0m [1;30m[ [0m[1;34mOrnedan   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdgpratt   [0m[1;30m][0m [1;30m[ [0m[1;34mavdi      [0m[1;30m][0m [1;30m[ [0m[1;34mgeorgew   [0m[1;30m][0m [1;30m[ [0m[1;34mAlainODea [0m[1;30m][0m [1;30m[ [0m[1;34mbjs       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkipd      [0m[1;30m][0m [1;30m[ [0m[1;34mmilessabin[0m[1;30m][0m [1;30m[ [0m[1;34mjml       [0m[1;30m][0m [1;30m[ [0m[1;34m{AS}      [0m[1;30m][0m [1;30m[ [0m[1;34mjmiven    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mherre[m]  [0m[1;30m][0m [1;30m[ [0m[1;34mhooptw    [0m[1;30m][0m [1;30m[ [0m[1;34mpoga      [0m[1;30m][0m [1;30m[ [0m[1;34mBengi     [0m[1;30m][0m [1;30m[ [0m[1;34mJSharp    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrizary    [0m[1;30m][0m [1;30m[ [0m[1;34mmystfox   [0m[1;30m][0m [1;30m[ [0m[1;34mcustommine[0m[1;30m][0m [1;30m[ [0m[1;34mstephe    [0m[1;30m][0m [1;30m[ [0m[1;34mavn       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mHeero__   [0m[1;30m][0m [1;30m[ [0m[1;34mgrandy___ [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m44[1;30m/[0;32m44[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mlancetw   [0m[1;30m][0m [1;30m[ [0m[1;34msdemos    [0m[1;30m][0m [1;30m[ [0m[1;34myminsky   [0m[1;30m][0m [1;30m[ [0m[1;34mPotatoGim [0m[1;30m][0m [1;30m[ [0m[1;34mcapicue   [0m[1;30m][0m 
+[1;30m[ [0m[1;34msclv      [0m[1;30m][0m [1;30m[ [0m[1;34mOliPicard [0m[1;30m][0m [1;30m[ [0m[1;34mtrig-ger  [0m[1;30m][0m [1;30m[ [0m[1;34mtazjin    [0m[1;30m][0m [1;30m[ [0m[1;34mJCGrant[m][0m[1;30m][0m 
+[1;30m[ [0m[1;34mYves[m]   [0m[1;30m][0m [1;30m[ [0m[1;34mM92854[m] [0m[1;30m][0m [1;30m[ [0m[1;34mgkaplan[m][0m[1;30m][0m [1;30m[ [0m[1;34mdrasich[m][0m[1;30m][0m [1;30m[ [0m[1;34mNopeMarker[0m[1;30m][0m 
+[1;30m[ [0m[1;34mgentam[m] [0m[1;30m][0m [1;30m[ [0m[1;34mnoraesae  [0m[1;30m][0m [1;30m[ [0m[1;34mProofTechn[0m[1;30m][0m [1;30m[ [0m[1;34mM-kevinlia[0m[1;30m][0m [1;30m[ [0m[1;34mjascot[m] [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrakete    [0m[1;30m][0m [1;30m[ [0m[1;34mGuest91110[0m[1;30m][0m [1;30m[ [0m[1;34mtomkerk[m][0m[1;30m][0m [1;30m[ [0m[1;34mcolton[m] [0m[1;30m][0m [1;30m[ [0m[1;34mM-krsiehl [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmoonarch  [0m[1;30m][0m [1;30m[ [0m[1;34mrfabbri[m][0m[1;30m][0m [1;30m[ [0m[1;34mollieh    [0m[1;30m][0m [1;30m[ [0m[1;34mjhinkle[m][0m[1;30m][0m [1;30m[ [0m[1;34mzaphar_ps[[0m[1;30m][0m 
+[1;30m[ [0m[1;34mmmmrrr[m] [0m[1;30m][0m [1;30m[ [0m[1;34mwr3n[m]   [0m[1;30m][0m [1;30m[ [0m[1;34mjacqueline[0m[1;30m][0m [1;30m[ [0m[1;34mptek[m]   [0m[1;30m][0m [1;30m[ [0m[1;34munknownln [0m[1;30m][0m 
+[1;30m[ [0m[1;34mcbHXBY1D[m[0m[1;30m][0m [1;30m[ [0m[1;34mSoif[m]   [0m[1;30m][0m [1;30m[ [0m[1;34mgoodboy[m][0m[1;30m][0m [1;30m[ [0m[1;34mbobjason[m[0m[1;30m][0m [1;30m[ [0m[1;34mFederalRic[0m[1;30m][0m 
+[1;30m[ [0m[1;34mTylerCecil[0m[1;30m][0m [1;30m[ [0m[1;34mhiq[m]    [0m[1;30m][0m [1;30m[ [0m[1;34mM-Quora   [0m[1;30m][0m [1;30m[ [0m[1;34mMatrixTrav[0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m44[1;30m/[0;32m44[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34msrenatus[m[0m[1;30m][0m [1;30m[ [0m[1;34mM-schmittl[0m[1;30m][0m [1;30m[ [0m[1;34mTheWizardT[0m[1;30m][0m [1;30m[ [0m[1;34mM-Illandan[0m[1;30m][0m [1;30m[ [0m[1;34mhendrik[m][0m[1;30m][0m 
+[1;30m[ [0m[1;34mdavidar_  [0m[1;30m][0m [1;30m[ [0m[1;34mM-berdario[0m[1;30m][0m [1;30m[ [0m[1;34maer[m]    [0m[1;30m][0m [1;30m[ [0m[1;34msirius[m] [0m[1;30m][0m [1;30m[ [0m[1;34mMagnap    [0m[1;30m][0m 
+[1;30m[ [0m[1;34msudoreboot[0m[1;30m][0m [1;30m[ [0m[1;34mkorayal[m][0m[1;30m][0m [1;30m[ [0m[1;34mmiviotros[[0m[1;30m][0m [1;30m[ [0m[1;34mseequ_    [0m[1;30m][0m [1;30m[ [0m[1;34mtester668[[0m[1;30m][0m 
+[1;30m[ [0m[1;34mm4lvin[m] [0m[1;30m][0m [1;30m[ [0m[1;34mrdesfo[m] [0m[1;30m][0m [1;30m[ [0m[1;34mkarroffel [0m[1;30m][0m [1;30m[ [0m[1;34mherzmeiste[0m[1;30m][0m [1;30m[ [0m[1;34melwan7[m] [0m[1;30m][0m 
+[1;30m[ [0m[1;34munclechu  [0m[1;30m][0m [1;30m[ [0m[1;34munlmtd    [0m[1;30m][0m [1;30m[ [0m[1;34mroadrunner[0m[1;30m][0m [1;30m[ [0m[1;34mcurry[m]  [0m[1;30m][0m [1;30m[ [0m[1;34mM-BostonEn[0m[1;30m][0m 
+[1;30m[ [0m[1;34mturt2live [0m[1;30m][0m [1;30m[ [0m[1;34mtfc[m]    [0m[1;30m][0m [1;30m[ [0m[1;34mjyp[m]    [0m[1;30m][0m [1;30m[ [0m[1;34miffsid[m] [0m[1;30m][0m [1;30m[ [0m[1;34mLex[m]    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mangelbeats[0m[1;30m][0m [1;30m[ [0m[1;34mcorintho[m[0m[1;30m][0m [1;30m[ [0m[1;34malaradia[m[0m[1;30m][0m [1;30m[ [0m[1;34mriaqn     [0m[1;30m][0m [1;30m[ [0m[1;34mdavidar   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mNickHu    [0m[1;30m][0m [1;30m[ [0m[1;34mbb010g    [0m[1;30m][0m [1;30m[ [0m[1;34mreactormon[0m[1;30m][0m [1;30m[ [0m[1;34mclosures99[0m[1;30m][0m [1;30m[ [0m[1;34mmonomon[m][0m[1;30m][0m 
+[1;30m[ [0m[1;34misacloud  [0m[1;30m][0m [1;30m[ [0m[1;34mAidan[m]  [0m[1;30m][0m [1;30m[ [0m[1;34mbaamonde  [0m[1;30m][0m [1;30m[ [0m[1;34mcaw       [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m56[1;30m/[0;32m56[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mposco     [0m[1;30m][0m [1;30m[ [0m[1;34makr[m]    [0m[1;30m][0m [1;30m[ [0m[1;34mcdornan_  [0m[1;30m][0m [1;30m[ [0m[1;34mNemesisD  [0m[1;30m][0m [1;30m[ [0m[1;34mbbielsa   [0m[1;30m][0m 
+[1;30m[ [0m[1;34miphy      [0m[1;30m][0m [1;30m[ [0m[1;34mrightfold [0m[1;30m][0m [1;30m[ [0m[1;34mtexasmynst[0m[1;30m][0m [1;30m[ [0m[1;34mrjungemann[0m[1;30m][0m [1;30m[ [0m[1;34mMeow-J    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbgyss     [0m[1;30m][0m [1;30m[ [0m[1;34mhsiktas   [0m[1;30m][0m [1;30m[ [0m[1;34msjl_      [0m[1;30m][0m [1;30m[ [0m[1;34mpchiusano [0m[1;30m][0m [1;30m[ [0m[1;34mTallenz   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mSolitaryCy[0m[1;30m][0m [1;30m[ [0m[1;34mmbeidler  [0m[1;30m][0m [1;30m[ [0m[1;34mangerman  [0m[1;30m][0m [1;30m[ [0m[1;34mthoradam  [0m[1;30m][0m [1;30m[ [0m[1;34mreem      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdogui     [0m[1;30m][0m [1;30m[ [0m[1;34mbigs      [0m[1;30m][0m [1;30m[ [0m[1;34mspicydonut[0m[1;30m][0m [1;30m[ [0m[1;34mkaeluka   [0m[1;30m][0m [1;30m[ [0m[1;34mlukexi    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mamatecha  [0m[1;30m][0m [1;30m[ [0m[1;34msa1_      [0m[1;30m][0m [1;30m[ [0m[1;34mBrando753-[0m[1;30m][0m [1;30m[ [0m[1;34miliastsi  [0m[1;30m][0m [1;30m[ [0m[1;34msivs      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mthallada  [0m[1;30m][0m [1;30m[ [0m[1;34mCir0X     [0m[1;30m][0m [1;30m[ [0m[1;34mRiviera_  [0m[1;30m][0m [1;30m[ [0m[1;34mProfpatsch[0m[1;30m][0m [1;30m[ [0m[1;34mkwantam1  [0m[1;30m][0m 
+[1;30m[ [0m[1;34masjo      [0m[1;30m][0m [1;30m[ [0m[1;34mTene      [0m[1;30m][0m [1;30m[ [0m[1;34msleblanc  [0m[1;30m][0m [1;30m[ [0m[1;34mmudfog_   [0m[1;30m][0m [1;30m[ [0m[1;34mVbitz     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmegaTherio[0m[1;30m][0m [1;30m[ [0m[1;34mmniip     [0m[1;30m][0m [1;30m[ [0m[1;34mdpn`      [0m[1;30m][0m [1;30m[ [0m[1;34mElsi      [0m[1;30m][0m [1;30m[ [0m[1;34mAdluc     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mMajiir    [0m[1;30m][0m [1;30m[ [0m[1;34mSornaensis[0m[1;30m][0m [1;30m[ [0m[1;34mTimWolla  [0m[1;30m][0m [1;30m[ [0m[1;34mthang1    [0m[1;30m][0m [1;30m[ [0m[1;34mkarce     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrootnode_ [0m[1;30m][0m [1;30m[ [0m[1;34mMitchellSa[0m[1;30m][0m [1;30m[ [0m[1;34mLiskni_si [0m[1;30m][0m [1;30m[ [0m[1;34mlispy     [0m[1;30m][0m [1;30m[ [0m[1;34marw__     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mfryguybob [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m52[1;30m/[0;32m52[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mQuintasan [0m[1;30m][0m [1;30m[ [0m[1;34mkiboneu   [0m[1;30m][0m [1;30m[ [0m[1;34mlordcirth [0m[1;30m][0m [1;30m[ [0m[1;34mubsan     [0m[1;30m][0m [1;30m[ [0m[1;34mpoxar     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdolio     [0m[1;30m][0m [1;30m[ [0m[1;34mepta      [0m[1;30m][0m [1;30m[ [0m[1;34mtreehaqr  [0m[1;30m][0m [1;30m[ [0m[1;34mpierrot   [0m[1;30m][0m [1;30m[ [0m[1;34mmedical   [0m[1;30m][0m 
+[1;30m[ [0m[1;34malexbiehl [0m[1;30m][0m [1;30m[ [0m[1;34mleah2     [0m[1;30m][0m [1;30m[ [0m[1;34mmkloczko  [0m[1;30m][0m [1;30m[ [0m[1;34mgspia     [0m[1;30m][0m [1;30m[ [0m[1;34maaron7    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mirclogger_[0m[1;30m][0m [1;30m[ [0m[1;34mzymurgy   [0m[1;30m][0m [1;30m[ [0m[1;34mbrennie   [0m[1;30m][0m [1;30m[ [0m[1;34mpent      [0m[1;30m][0m [1;30m[ [0m[1;34mTuplanolla[0m[1;30m][0m 
+[1;30m[ [0m[1;34mgarphy`aw [0m[1;30m][0m [1;30m[ [0m[1;34mNextHendri[0m[1;30m][0m [1;30m[ [0m[1;34mpacak     [0m[1;30m][0m [1;30m[ [0m[1;34mbungoman  [0m[1;30m][0m [1;30m[ [0m[1;34mjorj      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mSonderblad[0m[1;30m][0m [1;30m[ [0m[1;34mcfoch-alwa[0m[1;30m][0m [1;30m[ [0m[1;34mamosbird  [0m[1;30m][0m [1;30m[ [0m[1;34mkav       [0m[1;30m][0m [1;30m[ [0m[1;34mpita      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mswhalen   [0m[1;30m][0m [1;30m[ [0m[1;34mSolarAquar[0m[1;30m][0m [1;30m[ [0m[1;34mbod_      [0m[1;30m][0m [1;30m[ [0m[1;34murdh      [0m[1;30m][0m [1;30m[ [0m[1;34m\malex\   [0m[1;30m][0m 
+[1;30m[ [0m[1;34meikke     [0m[1;30m][0m [1;30m[ [0m[1;34manishathal[0m[1;30m][0m [1;30m[ [0m[1;34maweinstock[0m[1;30m][0m [1;30m[ [0m[1;34mBenzi-Juni[0m[1;30m][0m [1;30m[ [0m[1;34mbitonic   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mvikram____[0m[1;30m][0m [1;30m[ [0m[1;34mbytesighs [0m[1;30m][0m [1;30m[ [0m[1;34mzpconn____[0m[1;30m][0m [1;30m[ [0m[1;34mdwarders  [0m[1;30m][0m [1;30m[ [0m[1;34mmnoonan   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mleothrix  [0m[1;30m][0m [1;30m[ [0m[1;34mt00m0     [0m[1;30m][0m [1;30m[ [0m[1;34mpfoetche1 [0m[1;30m][0m [1;30m[ [0m[1;34mAmadiro   [0m[1;30m][0m [1;30m[ [0m[1;34mbartavelle[0m[1;30m][0m 
+[1;30m[ [0m[1;34mdedgrant_ [0m[1;30m][0m [1;30m[ [0m[1;34mcoeus     [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m59[1;30m/[0;32m59[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mAtlantic77[0m[1;30m][0m [1;30m[ [0m[1;34mcgfbee    [0m[1;30m][0m [1;30m[ [0m[1;34myepo      [0m[1;30m][0m [1;30m[ [0m[1;34msrcerer   [0m[1;30m][0m [1;30m[ [0m[1;34mlynn      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mhughrawlin[0m[1;30m][0m [1;30m[ [0m[1;34mwavewave  [0m[1;30m][0m [1;30m[ [0m[1;34mglitch_hat[0m[1;30m][0m [1;30m[ [0m[1;34mcansis    [0m[1;30m][0m [1;30m[ [0m[1;34mangular_mi[0m[1;30m][0m 
+[1;30m[ [0m[1;34mshans_    [0m[1;30m][0m [1;30m[ [0m[1;34medwardk   [0m[1;30m][0m [1;30m[ [0m[1;34mtjpeden   [0m[1;30m][0m [1;30m[ [0m[1;34mS11001001 [0m[1;30m][0m [1;30m[ [0m[1;34mwizonesolu[0m[1;30m][0m 
+[1;30m[ [0m[1;34mzph       [0m[1;30m][0m [1;30m[ [0m[1;34mmkurkov_  [0m[1;30m][0m [1;30m[ [0m[1;34mruneks    [0m[1;30m][0m [1;30m[ [0m[1;34mTabAtkins [0m[1;30m][0m [1;30m[ [0m[1;34me         [0m[1;30m][0m 
+[1;30m[ [0m[1;34msm        [0m[1;30m][0m [1;30m[ [0m[1;34mriatre    [0m[1;30m][0m [1;30m[ [0m[1;34mearldougla[0m[1;30m][0m [1;30m[ [0m[1;34mmendez    [0m[1;30m][0m [1;30m[ [0m[1;34mamuck     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmitch_    [0m[1;30m][0m [1;30m[ [0m[1;34mjzl       [0m[1;30m][0m [1;30m[ [0m[1;34mWarmCookie[0m[1;30m][0m [1;30m[ [0m[1;34mehubinette[0m[1;30m][0m [1;30m[ [0m[1;34mvaldyn    [0m[1;30m][0m 
+[1;30m[ [0m[1;34meagleflo  [0m[1;30m][0m [1;30m[ [0m[1;34mabhixec   [0m[1;30m][0m [1;30m[ [0m[1;34mTommyC    [0m[1;30m][0m [1;30m[ [0m[1;34mjluttine  [0m[1;30m][0m [1;30m[ [0m[1;34mMadars    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mshiona    [0m[1;30m][0m [1;30m[ [0m[1;34mqz        [0m[1;30m][0m [1;30m[ [0m[1;34mraid      [0m[1;30m][0m [1;30m[ [0m[1;34mc0dehero  [0m[1;30m][0m [1;30m[ [0m[1;34mycheng    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtsani     [0m[1;30m][0m [1;30m[ [0m[1;34mkyren     [0m[1;30m][0m [1;30m[ [0m[1;34mtekacs    [0m[1;30m][0m [1;30m[ [0m[1;34mglguy     [0m[1;30m][0m [1;30m[ [0m[1;34mwatersoul_[0m[1;30m][0m 
+[1;30m[ [0m[1;34mcmn       [0m[1;30m][0m [1;30m[ [0m[1;34mahihi2    [0m[1;30m][0m [1;30m[ [0m[1;34mpetercomma[0m[1;30m][0m [1;30m[ [0m[1;34mplatz     [0m[1;30m][0m [1;30m[ [0m[1;34mipuustin  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mjackhill  [0m[1;30m][0m [1;30m[ [0m[1;34mec\_      [0m[1;30m][0m [1;30m[ [0m[1;34mbno1      [0m[1;30m][0m [1;30m[ [0m[1;34mbaweaver  [0m[1;30m][0m [1;30m[ [0m[1;34mflxw      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbus000    [0m[1;30m][0m [1;30m[ [0m[1;34mDoubleDonk[0m[1;30m][0m [1;30m[ [0m[1;34malanz     [0m[1;30m][0m [1;30m[ [0m[1;34mjlouis    [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m53[1;30m/[0;32m53[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mhanDerPede[0m[1;30m][0m [1;30m[ [0m[1;34mcomboy    [0m[1;30m][0m [1;30m[ [0m[1;34mpasukon_  [0m[1;30m][0m [1;30m[ [0m[1;34mRembane   [0m[1;30m][0m [1;30m[ [0m[1;34mscinawa1  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mxnyhps    [0m[1;30m][0m [1;30m[ [0m[1;34mjrslepak  [0m[1;30m][0m [1;30m[ [0m[1;34mBoreeas_  [0m[1;30m][0m [1;30m[ [0m[1;34mmathu     [0m[1;30m][0m [1;30m[ [0m[1;34mrazwelle1 [0m[1;30m][0m 
+[1;30m[ [0m[1;34mjstolarek [0m[1;30m][0m [1;30m[ [0m[1;34mcaasih    [0m[1;30m][0m [1;30m[ [0m[1;34mdbohdan   [0m[1;30m][0m [1;30m[ [0m[1;34mxintron   [0m[1;30m][0m [1;30m[ [0m[1;34mGreySunshi[0m[1;30m][0m 
+[1;30m[ [0m[1;34mnek0      [0m[1;30m][0m [1;30m[ [0m[1;34mmrmenageri[0m[1;30m][0m [1;30m[ [0m[1;34mcynick    [0m[1;30m][0m [1;30m[ [0m[1;34matle      [0m[1;30m][0m [1;30m[ [0m[1;34msalva     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mCuriousErn[0m[1;30m][0m [1;30m[ [0m[1;34mLiaoTao   [0m[1;30m][0m [1;30m[ [0m[1;34ms4msung   [0m[1;30m][0m [1;30m[ [0m[1;34mFylwind   [0m[1;30m][0m [1;30m[ [0m[1;34mm0rphism  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdelYsid   [0m[1;30m][0m [1;30m[ [0m[1;34mVorpal    [0m[1;30m][0m [1;30m[ [0m[1;34mmgaare    [0m[1;30m][0m [1;30m[ [0m[1;34mmudfog    [0m[1;30m][0m [1;30m[ [0m[1;34mclever    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrobogoat  [0m[1;30m][0m [1;30m[ [0m[1;34mdyreshark [0m[1;30m][0m [1;30m[ [0m[1;34mwamaral   [0m[1;30m][0m [1;30m[ [0m[1;34mmantovani [0m[1;30m][0m [1;30m[ [0m[1;34mIntensity [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdgonyeo   [0m[1;30m][0m [1;30m[ [0m[1;34mzerokarmal[0m[1;30m][0m [1;30m[ [0m[1;34mephemeron [0m[1;30m][0m [1;30m[ [0m[1;34mAnkhers   [0m[1;30m][0m [1;30m[ [0m[1;34mbob_twinkl[0m[1;30m][0m 
+[1;30m[ [0m[1;34mGuest5781 [0m[1;30m][0m [1;30m[ [0m[1;34magrif     [0m[1;30m][0m [1;30m[ [0m[1;34msykora    [0m[1;30m][0m [1;30m[ [0m[1;34mJello_Rapt[0m[1;30m][0m [1;30m[ [0m[1;34mnerdystree[0m[1;30m][0m 
+[1;30m[ [0m[1;34mvfs       [0m[1;30m][0m [1;30m[ [0m[1;34mnbouscal  [0m[1;30m][0m [1;30m[ [0m[1;34mbrixen    [0m[1;30m][0m [1;30m[ [0m[1;34mTonL      [0m[1;30m][0m [1;30m[ [0m[1;34mdan64     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mDigitalKiw[0m[1;30m][0m [1;30m[ [0m[1;34modamn     [0m[1;30m][0m [1;30m[ [0m[1;34mlpsmith   [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m55[1;30m/[0;32m55[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mDDR       [0m[1;30m][0m [1;30m[ [0m[1;34mReinH     [0m[1;30m][0m [1;30m[ [0m[1;34mcoup_de_sh[0m[1;30m][0m [1;30m[ [0m[1;34mJDevlieghe[0m[1;30m][0m [1;30m[ [0m[1;34myaknyasn  [0m[1;30m][0m 
+[1;30m[ [0m[1;34maegray    [0m[1;30m][0m [1;30m[ [0m[1;34metrepum   [0m[1;30m][0m [1;30m[ [0m[1;34mhongminh1e[0m[1;30m][0m [1;30m[ [0m[1;34mryanpcmcqu[0m[1;30m][0m [1;30m[ [0m[1;34mgornikm_  [0m[1;30m][0m 
+[1;30m[ [0m[1;34majmccluske[0m[1;30m][0m [1;30m[ [0m[1;34mpeschkaj  [0m[1;30m][0m [1;30m[ [0m[1;34mnkpart    [0m[1;30m][0m [1;30m[ [0m[1;34mhouli     [0m[1;30m][0m [1;30m[ [0m[1;34mXorlev    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbanjiewen [0m[1;30m][0m [1;30m[ [0m[1;34mecobos    [0m[1;30m][0m [1;30m[ [0m[1;34manoe      [0m[1;30m][0m [1;30m[ [0m[1;34mvodkaInfer[0m[1;30m][0m [1;30m[ [0m[1;34mebutleriv [0m[1;30m][0m 
+[1;30m[ [0m[1;34manachrome [0m[1;30m][0m [1;30m[ [0m[1;34mpmade     [0m[1;30m][0m [1;30m[ [0m[1;34mstrmpnk   [0m[1;30m][0m [1;30m[ [0m[1;34mjaargon   [0m[1;30m][0m [1;30m[ [0m[1;34mrjeli     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtharper_  [0m[1;30m][0m [1;30m[ [0m[1;34menolan    [0m[1;30m][0m [1;30m[ [0m[1;34mkian      [0m[1;30m][0m [1;30m[ [0m[1;34miross     [0m[1;30m][0m [1;30m[ [0m[1;34mDykam     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkvazau    [0m[1;30m][0m [1;30m[ [0m[1;34mnahra     [0m[1;30m][0m [1;30m[ [0m[1;34mgpampara  [0m[1;30m][0m [1;30m[ [0m[1;34mlattenwald[0m[1;30m][0m [1;30m[ [0m[1;34msi14      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mpaf31     [0m[1;30m][0m [1;30m[ [0m[1;34mzmanian___[0m[1;30m][0m [1;30m[ [0m[1;34mstasku    [0m[1;30m][0m [1;30m[ [0m[1;34mincomprehe[0m[1;30m][0m [1;30m[ [0m[1;34maristid   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mamiri     [0m[1;30m][0m [1;30m[ [0m[1;34mjohtso    [0m[1;30m][0m [1;30m[ [0m[1;34mrstone_   [0m[1;30m][0m [1;30m[ [0m[1;34mnoctux    [0m[1;30m][0m [1;30m[ [0m[1;34mesph      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mVeltas    [0m[1;30m][0m [1;30m[ [0m[1;34mirishsul1a[0m[1;30m][0m [1;30m[ [0m[1;34mEliel_    [0m[1;30m][0m [1;30m[ [0m[1;34msamgd     [0m[1;30m][0m [1;30m[ [0m[1;34mmceier    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mGuest24075[0m[1;30m][0m [1;30m[ [0m[1;34mwagle     [0m[1;30m][0m [1;30m[ [0m[1;34mhpd       [0m[1;30m][0m [1;30m[ [0m[1;34mhiptobecub[0m[1;30m][0m [1;30m[ [0m[1;34mnekomune  [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m56[1;30m/[0;32m56[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mZemyla    [0m[1;30m][0m [1;30m[ [0m[1;34mSegFaultAX[0m[1;30m][0m [1;30m[ [0m[1;34mquaestor  [0m[1;30m][0m [1;30m[ [0m[1;34moherrala  [0m[1;30m][0m [1;30m[ [0m[1;34mRaynes    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mLord_of_Li[0m[1;30m][0m [1;30m[ [0m[1;34mdario`    [0m[1;30m][0m [1;30m[ [0m[1;34msuzu      [0m[1;30m][0m [1;30m[ [0m[1;34mPurlox    [0m[1;30m][0m [1;30m[ [0m[1;34mnaudiz    [0m[1;30m][0m 
+[1;30m[ [0m[1;34manderson  [0m[1;30m][0m [1;30m[ [0m[1;34mwting     [0m[1;30m][0m [1;30m[ [0m[1;34mcyberlard [0m[1;30m][0m [1;30m[ [0m[1;34msanjoyd   [0m[1;30m][0m [1;30m[ [0m[1;34mchriswk   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mfuziontech[0m[1;30m][0m [1;30m[ [0m[1;34mdstockwell[0m[1;30m][0m [1;30m[ [0m[1;34mthi_      [0m[1;30m][0m [1;30m[ [0m[1;34mrodarmor  [0m[1;30m][0m [1;30m[ [0m[1;34mparoxp    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mChobbes   [0m[1;30m][0m [1;30m[ [0m[1;34mprooftechn[0m[1;30m][0m [1;30m[ [0m[1;34mNeo       [0m[1;30m][0m [1;30m[ [0m[1;34mmimi_vx   [0m[1;30m][0m [1;30m[ [0m[1;34mLaney     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mstatusbot [0m[1;30m][0m [1;30m[ [0m[1;34mGabemo    [0m[1;30m][0m [1;30m[ [0m[1;34mfugyk     [0m[1;30m][0m [1;30m[ [0m[1;34mcarbolymer[0m[1;30m][0m [1;30m[ [0m[1;34maminb     [0m[1;30m][0m 
+[1;30m[ [0m[1;34m_cyril_   [0m[1;30m][0m [1;30m[ [0m[1;34mdh        [0m[1;30m][0m [1;30m[ [0m[1;34mMitchW_   [0m[1;30m][0m [1;30m[ [0m[1;34mgallais_  [0m[1;30m][0m [1;30m[ [0m[1;34mtmciver   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mAustinInco[0m[1;30m][0m [1;30m[ [0m[1;34mskeuchel_ [0m[1;30m][0m [1;30m[ [0m[1;34momilu_    [0m[1;30m][0m [1;30m[ [0m[1;34mMorgawr   [0m[1;30m][0m [1;30m[ [0m[1;34mCh3ck__   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mje5finge` [0m[1;30m][0m [1;30m[ [0m[1;34mobiwahn   [0m[1;30m][0m [1;30m[ [0m[1;34mniluje    [0m[1;30m][0m [1;30m[ [0m[1;34mreynir    [0m[1;30m][0m [1;30m[ [0m[1;34maidecoe   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mjoachifm  [0m[1;30m][0m [1;30m[ [0m[1;34mbesenwesen[0m[1;30m][0m [1;30m[ [0m[1;34mxaimus    [0m[1;30m][0m [1;30m[ [0m[1;34majp       [0m[1;30m][0m [1;30m[ [0m[1;34mchirpsalot[0m[1;30m][0m 
+[1;30m[ [0m[1;34mVoldenet  [0m[1;30m][0m [1;30m[ [0m[1;34mspion     [0m[1;30m][0m [1;30m[ [0m[1;34mkotangen1 [0m[1;30m][0m [1;30m[ [0m[1;34mfxrs      [0m[1;30m][0m [1;30m[ [0m[1;34mdysfun    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mhodapp    [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m59[1;30m/[0;32m59[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mabrar     [0m[1;30m][0m [1;30m[ [0m[1;34mbaetheus  [0m[1;30m][0m [1;30m[ [0m[1;34mdrdo      [0m[1;30m][0m [1;30m[ [0m[1;34mcheshircat[0m[1;30m][0m [1;30m[ [0m[1;34malpounet  [0m[1;30m][0m 
+[1;30m[ [0m[1;34masm89     [0m[1;30m][0m [1;30m[ [0m[1;34memerson   [0m[1;30m][0m [1;30m[ [0m[1;34mbyorgey   [0m[1;30m][0m [1;30m[ [0m[1;34mdustinm   [0m[1;30m][0m [1;30m[ [0m[1;34mezyang    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmou       [0m[1;30m][0m [1;30m[ [0m[1;34mlogcat    [0m[1;30m][0m [1;30m[ [0m[1;34mJinxit    [0m[1;30m][0m [1;30m[ [0m[1;34mmeck      [0m[1;30m][0m [1;30m[ [0m[1;34mpringlesca[0m[1;30m][0m 
+[1;30m[ [0m[1;34mjxv       [0m[1;30m][0m [1;30m[ [0m[1;34mw4and0er96[0m[1;30m][0m [1;30m[ [0m[1;34mdpower    [0m[1;30m][0m [1;30m[ [0m[1;34mrgrinberg [0m[1;30m][0m [1;30m[ [0m[1;34msaylu     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mgleber_   [0m[1;30m][0m [1;30m[ [0m[1;34mfeepo     [0m[1;30m][0m [1;30m[ [0m[1;34mjorendorff[0m[1;30m][0m [1;30m[ [0m[1;34mPatrickRob[0m[1;30m][0m [1;30m[ [0m[1;34mcarter    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mggherdov  [0m[1;30m][0m [1;30m[ [0m[1;34mdsm__     [0m[1;30m][0m [1;30m[ [0m[1;34mjonrh     [0m[1;30m][0m [1;30m[ [0m[1;34mmoop      [0m[1;30m][0m [1;30m[ [0m[1;34mmt        [0m[1;30m][0m 
+[1;30m[ [0m[1;34msveit     [0m[1;30m][0m [1;30m[ [0m[1;34mUlrar     [0m[1;30m][0m [1;30m[ [0m[1;34mAdeon     [0m[1;30m][0m [1;30m[ [0m[1;34mDeewiant  [0m[1;30m][0m [1;30m[ [0m[1;34mnathanic  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkriton    [0m[1;30m][0m [1;30m[ [0m[1;34mkosmikus  [0m[1;30m][0m [1;30m[ [0m[1;34mGuest700  [0m[1;30m][0m [1;30m[ [0m[1;34mfolsen    [0m[1;30m][0m [1;30m[ [0m[1;34mnyuszika7h[0m[1;30m][0m 
+[1;30m[ [0m[1;34mlyxia     [0m[1;30m][0m [1;30m[ [0m[1;34msolarus   [0m[1;30m][0m [1;30m[ [0m[1;34mmadsj     [0m[1;30m][0m [1;30m[ [0m[1;34mAthas     [0m[1;30m][0m [1;30m[ [0m[1;34msrhb      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbjobjo    [0m[1;30m][0m [1;30m[ [0m[1;34masync_prin[0m[1;30m][0m [1;30m[ [0m[1;34mmehs      [0m[1;30m][0m [1;30m[ [0m[1;34maverell   [0m[1;30m][0m [1;30m[ [0m[1;34mcic       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmoll      [0m[1;30m][0m [1;30m[ [0m[1;34mMaerten   [0m[1;30m][0m [1;30m[ [0m[1;34mbbee      [0m[1;30m][0m [1;30m[ [0m[1;34mGeekingfro[0m[1;30m][0m [1;30m[ [0m[1;34mdpepsilon [0m[1;30m][0m 
+[1;30m[ [0m[1;34mscared    [0m[1;30m][0m [1;30m[ [0m[1;34mraibutera [0m[1;30m][0m [1;30m[ [0m[1;34mRevJohnnyH[0m[1;30m][0m [1;30m[ [0m[1;34mkshannon  [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m60[1;30m/[0;32m60[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mnshepperd1[0m[1;30m][0m [1;30m[ [0m[1;34memmflo    [0m[1;30m][0m [1;30m[ [0m[1;34mXe        [0m[1;30m][0m [1;30m[ [0m[1;34mlachenmaye[0m[1;30m][0m [1;30m[ [0m[1;34mnopf      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbcoppens  [0m[1;30m][0m [1;30m[ [0m[1;34mflebron   [0m[1;30m][0m [1;30m[ [0m[1;34mdiscrttm  [0m[1;30m][0m [1;30m[ [0m[1;34mbenoliver9[0m[1;30m][0m [1;30m[ [0m[1;34mwjm       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrdococ    [0m[1;30m][0m [1;30m[ [0m[1;34mjoehillen [0m[1;30m][0m [1;30m[ [0m[1;34mtolt      [0m[1;30m][0m [1;30m[ [0m[1;34mcarter-znc[0m[1;30m][0m [1;30m[ [0m[1;34mg2        [0m[1;30m][0m 
+[1;30m[ [0m[1;34mJaxan     [0m[1;30m][0m [1;30m[ [0m[1;34mjol       [0m[1;30m][0m [1;30m[ [0m[1;34mmaerwald_ [0m[1;30m][0m [1;30m[ [0m[1;34msbrg      [0m[1;30m][0m [1;30m[ [0m[1;34mmikeizbick[0m[1;30m][0m 
+[1;30m[ [0m[1;34mMarcelineV[0m[1;30m][0m [1;30m[ [0m[1;34mBytesAndCo[0m[1;30m][0m [1;30m[ [0m[1;34mflobberlet[0m[1;30m][0m [1;30m[ [0m[1;34mIgloo     [0m[1;30m][0m [1;30m[ [0m[1;34mlstor     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mcods      [0m[1;30m][0m [1;30m[ [0m[1;34mssedov    [0m[1;30m][0m [1;30m[ [0m[1;34mliyang_   [0m[1;30m][0m [1;30m[ [0m[1;34mwto_      [0m[1;30m][0m [1;30m[ [0m[1;34mfroztbyte [0m[1;30m][0m 
+[1;30m[ [0m[1;34mnshepperd_[0m[1;30m][0m [1;30m[ [0m[1;34mspacebug  [0m[1;30m][0m [1;30m[ [0m[1;34msaurik    [0m[1;30m][0m [1;30m[ [0m[1;34mworch_    [0m[1;30m][0m [1;30m[ [0m[1;34mc0smo_    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mxplat     [0m[1;30m][0m [1;30m[ [0m[1;34mmalt3     [0m[1;30m][0m [1;30m[ [0m[1;34mtdammers  [0m[1;30m][0m [1;30m[ [0m[1;34marand     [0m[1;30m][0m [1;30m[ [0m[1;34mmokus     [0m[1;30m][0m 
+[1;30m[ [0m[1;34madraenwan [0m[1;30m][0m [1;30m[ [0m[1;34mvimto     [0m[1;30m][0m [1;30m[ [0m[1;34muwap      [0m[1;30m][0m [1;30m[ [0m[1;34mtomku     [0m[1;30m][0m [1;30m[ [0m[1;34mpyrtsa    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mChousuke  [0m[1;30m][0m [1;30m[ [0m[1;34mbrezel    [0m[1;30m][0m [1;30m[ [0m[1;34mlukky513  [0m[1;30m][0m [1;30m[ [0m[1;34mnikivi    [0m[1;30m][0m [1;30m[ [0m[1;34mowlscienti[0m[1;30m][0m 
+[1;30m[ [0m[1;34mEagle_Erwi[0m[1;30m][0m [1;30m[ [0m[1;34mijp       [0m[1;30m][0m [1;30m[ [0m[1;34mcapisce   [0m[1;30m][0m [1;30m[ [0m[1;34mEvanR     [0m[1;30m][0m [1;30m[ [0m[1;34mkeri      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtctara    [0m[1;30m][0m [1;30m[ [0m[1;34mpdgwien   [0m[1;30m][0m [1;30m[ [0m[1;34mlin___    [0m[1;30m][0m [1;30m[ [0m[1;34mso        [0m[1;30m][0m [1;30m[ [0m[1;34mchelfi    [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m60[1;30m/[0;32m60[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mCerise    [0m[1;30m][0m [1;30m[ [0m[1;34mholla     [0m[1;30m][0m [1;30m[ [0m[1;34mphz_      [0m[1;30m][0m [1;30m[ [0m[1;34mheath     [0m[1;30m][0m [1;30m[ [0m[1;34mdqd       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mjstimpfle [0m[1;30m][0m [1;30m[ [0m[1;34madarqui   [0m[1;30m][0m [1;30m[ [0m[1;34mmavihs    [0m[1;30m][0m [1;30m[ [0m[1;34mRanhir    [0m[1;30m][0m [1;30m[ [0m[1;34mtolt_     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mMeanirelli[0m[1;30m][0m [1;30m[ [0m[1;34mbenzrf    [0m[1;30m][0m [1;30m[ [0m[1;34m[exa]     [0m[1;30m][0m [1;30m[ [0m[1;34mCathy     [0m[1;30m][0m [1;30m[ [0m[1;34mab9rf     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mBane^     [0m[1;30m][0m [1;30m[ [0m[1;34mtnks      [0m[1;30m][0m [1;30m[ [0m[1;34mGredu     [0m[1;30m][0m [1;30m[ [0m[1;34mdixie_    [0m[1;30m][0m [1;30m[ [0m[1;34mhegge     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mDeaddy    [0m[1;30m][0m [1;30m[ [0m[1;34mwrengr_awa[0m[1;30m][0m [1;30m[ [0m[1;34mZoddo     [0m[1;30m][0m [1;30m[ [0m[1;34mabra0     [0m[1;30m][0m [1;30m[ [0m[1;34macowley_aw[0m[1;30m][0m 
+[1;30m[ [0m[1;34mclog      [0m[1;30m][0m [1;30m[ [0m[1;34mmero      [0m[1;30m][0m [1;30m[ [0m[1;34mcpape     [0m[1;30m][0m [1;30m[ [0m[1;34mggVGc     [0m[1;30m][0m [1;30m[ [0m[1;34macro      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mRobin_Jado[0m[1;30m][0m [1;30m[ [0m[1;34mjokester  [0m[1;30m][0m [1;30m[ [0m[1;34mtych0     [0m[1;30m][0m [1;30m[ [0m[1;34msimon     [0m[1;30m][0m [1;30m[ [0m[1;34mlstrano   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mSam__     [0m[1;30m][0m [1;30m[ [0m[1;34mmyme      [0m[1;30m][0m [1;30m[ [0m[1;34mfiddlerwoa[0m[1;30m][0m [1;30m[ [0m[1;34mkoala_man [0m[1;30m][0m [1;30m[ [0m[1;34mjuri_     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmk-fg     [0m[1;30m][0m [1;30m[ [0m[1;34mgrayhatter[0m[1;30m][0m [1;30m[ [0m[1;34mWillis    [0m[1;30m][0m [1;30m[ [0m[1;34mheinrich59[0m[1;30m][0m [1;30m[ [0m[1;34mtwk-      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbendrickla[0m[1;30m][0m [1;30m[ [0m[1;34mhappy0    [0m[1;30m][0m [1;30m[ [0m[1;34mhiredman  [0m[1;30m][0m [1;30m[ [0m[1;34mArguggi   [0m[1;30m][0m [1;30m[ [0m[1;34mpmn       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mchindy    [0m[1;30m][0m [1;30m[ [0m[1;34mjoeyh     [0m[1;30m][0m [1;30m[ [0m[1;34mtgeeky    [0m[1;30m][0m [1;30m[ [0m[1;34m_guios    [0m[1;30m][0m [1;30m[ [0m[1;34mangseus_  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mSaidinWoT [0m[1;30m][0m [1;30m[ [0m[1;34mvin-ivar  [0m[1;30m][0m [1;30m[ [0m[1;34mstaffehn  [0m[1;30m][0m [1;30m[ [0m[1;34msujeet    [0m[1;30m][0m [1;30m[ [0m[1;34mHalfEatenP[0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m56[1;30m/[0;32m56[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mtimrs2998 [0m[1;30m][0m [1;30m[ [0m[1;34mnak_      [0m[1;30m][0m [1;30m[ [0m[1;34mSaimeidae_[0m[1;30m][0m [1;30m[ [0m[1;34mesmiurium_[0m[1;30m][0m [1;30m[ [0m[1;34msns       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mbrent80_pl[0m[1;30m][0m [1;30m[ [0m[1;34mluis`     [0m[1;30m][0m [1;30m[ [0m[1;34mjamiis_   [0m[1;30m][0m [1;30m[ [0m[1;34mSolarion  [0m[1;30m][0m [1;30m[ [0m[1;34mtippenein [0m[1;30m][0m 
+[1;30m[ [0m[1;34marmlesshob[0m[1;30m][0m [1;30m[ [0m[1;34mtessier_  [0m[1;30m][0m [1;30m[ [0m[1;34mcodebje_  [0m[1;30m][0m [1;30m[ [0m[1;34mCindyLinz [0m[1;30m][0m [1;30m[ [0m[1;34mmutsig_   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mintelux_  [0m[1;30m][0m [1;30m[ [0m[1;34mvincenz_  [0m[1;30m][0m [1;30m[ [0m[1;34mess_sing  [0m[1;30m][0m [1;30m[ [0m[1;34mstux|RC   [0m[1;30m][0m [1;30m[ [0m[1;34mamx       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkriztw    [0m[1;30m][0m [1;30m[ [0m[1;34mnemesit|zn[0m[1;30m][0m [1;30m[ [0m[1;34mgreymalkin[0m[1;30m][0m [1;30m[ [0m[1;34mlokydor   [0m[1;30m][0m [1;30m[ [0m[1;34mAtnNn     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mmrd       [0m[1;30m][0m [1;30m[ [0m[1;34mopqdonut  [0m[1;30m][0m [1;30m[ [0m[1;34mcatern    [0m[1;30m][0m [1;30m[ [0m[1;34mongy      [0m[1;30m][0m [1;30m[ [0m[1;34mfairfieldt[0m[1;30m][0m 
+[1;30m[ [0m[1;34mbrisbin   [0m[1;30m][0m [1;30m[ [0m[1;34mJPohlmann [0m[1;30m][0m [1;30m[ [0m[1;34mgsingh93  [0m[1;30m][0m [1;30m[ [0m[1;34mosfameron [0m[1;30m][0m [1;30m[ [0m[1;34mkofdog    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mowickstrom[0m[1;30m][0m [1;30m[ [0m[1;34mexio4     [0m[1;30m][0m [1;30m[ [0m[1;34mtjt       [0m[1;30m][0m [1;30m[ [0m[1;34mn__dles   [0m[1;30m][0m [1;30m[ [0m[1;34mstvc      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mthreshold [0m[1;30m][0m [1;30m[ [0m[1;34mpleiosaur [0m[1;30m][0m [1;30m[ [0m[1;34mQRealm    [0m[1;30m][0m [1;30m[ [0m[1;34mcharco    [0m[1;30m][0m [1;30m[ [0m[1;34mDeadhand  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mTaneb     [0m[1;30m][0m [1;30m[ [0m[1;34mForkk     [0m[1;30m][0m [1;30m[ [0m[1;34mjgornick  [0m[1;30m][0m [1;30m[ [0m[1;34mflout     [0m[1;30m][0m [1;30m[ [0m[1;34mrotcpy    [0m[1;30m][0m 
+[1;30m[ [0m[1;34ml_zzie    [0m[1;30m][0m [1;30m[ [0m[1;34mmearnsh   [0m[1;30m][0m [1;30m[ [0m[1;34mfergusnobl[0m[1;30m][0m [1;30m[ [0m[1;34mpeddie    [0m[1;30m][0m [1;30m[ [0m[1;34myezariaely[0m[1;30m][0m 
+[1;30m[ [0m[1;34mcmr       [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m58[1;30m/[0;32m58[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mnathyong  [0m[1;30m][0m [1;30m[ [0m[1;34mps-auxw   [0m[1;30m][0m [1;30m[ [0m[1;34mdivVerent [0m[1;30m][0m [1;30m[ [0m[1;34mcbaines   [0m[1;30m][0m [1;30m[ [0m[1;34mbbaren    [0m[1;30m][0m 
+[1;30m[ [0m[1;34msiddhu    [0m[1;30m][0m [1;30m[ [0m[1;34mdxld      [0m[1;30m][0m [1;30m[ [0m[1;34mtrevorrile[0m[1;30m][0m [1;30m[ [0m[1;34mHafydd    [0m[1;30m][0m [1;30m[ [0m[1;34mSAL9000   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mncl28     [0m[1;30m][0m [1;30m[ [0m[1;34mcodebam   [0m[1;30m][0m [1;30m[ [0m[1;34mVivek     [0m[1;30m][0m [1;30m[ [0m[1;34mnumeo     [0m[1;30m][0m [1;30m[ [0m[1;34mramatevish[0m[1;30m][0m 
+[1;30m[ [0m[1;34mprzembot  [0m[1;30m][0m [1;30m[ [0m[1;34mbuoto     [0m[1;30m][0m [1;30m[ [0m[1;34m_6a68     [0m[1;30m][0m [1;30m[ [0m[1;34mmmaruseacp[0m[1;30m][0m [1;30m[ [0m[1;34mpelegreno_[0m[1;30m][0m 
+[1;30m[ [0m[1;34mtsou      [0m[1;30m][0m [1;30m[ [0m[1;34mrotty     [0m[1;30m][0m [1;30m[ [0m[1;34mda-x      [0m[1;30m][0m [1;30m[ [0m[1;34mcjh`      [0m[1;30m][0m [1;30m[ [0m[1;34mXMunkki   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mxa0       [0m[1;30m][0m [1;30m[ [0m[1;34mdunj3     [0m[1;30m][0m [1;30m[ [0m[1;34mdarthdeus [0m[1;30m][0m [1;30m[ [0m[1;34mmxf       [0m[1;30m][0m [1;30m[ [0m[1;34medran     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdequbed   [0m[1;30m][0m [1;30m[ [0m[1;34mkaol      [0m[1;30m][0m [1;30m[ [0m[1;34mBaughn    [0m[1;30m][0m [1;30m[ [0m[1;34mbxc       [0m[1;30m][0m [1;30m[ [0m[1;34msdx23     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mandreass  [0m[1;30m][0m [1;30m[ [0m[1;34mrootmos   [0m[1;30m][0m [1;30m[ [0m[1;34mftop      [0m[1;30m][0m [1;30m[ [0m[1;34mDustyDingo[0m[1;30m][0m [1;30m[ [0m[1;34mspaceships[0m[1;30m][0m 
+[1;30m[ [0m[1;34mpinkmuffin[0m[1;30m][0m [1;30m[ [0m[1;34mQuantumLog[0m[1;30m][0m [1;30m[ [0m[1;34meL_Bart0- [0m[1;30m][0m [1;30m[ [0m[1;34mjmaki     [0m[1;30m][0m [1;30m[ [0m[1;34mshapr     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkennyp    [0m[1;30m][0m [1;30m[ [0m[1;34mjw358     [0m[1;30m][0m [1;30m[ [0m[1;34mstaticfox [0m[1;30m][0m [1;30m[ [0m[1;34mNinja3047 [0m[1;30m][0m [1;30m[ [0m[1;34mlouisriese[0m[1;30m][0m 
+[1;30m[ [0m[1;34midupree   [0m[1;30m][0m [1;30m[ [0m[1;34mbitemyapp [0m[1;30m][0m [1;30m[ [0m[1;34mwayne     [0m[1;30m][0m [1;30m[ [0m[1;34mdredozubov[0m[1;30m][0m [1;30m[ [0m[1;34mircbrowse [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkubrat    [0m[1;30m][0m [1;30m[ [0m[1;34mnilOps    [0m[1;30m][0m [1;30m[ [0m[1;34mkmicu     [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m57[1;30m/[0;32m57[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mstrixy    [0m[1;30m][0m [1;30m[ [0m[1;34mmak`      [0m[1;30m][0m [1;30m[ [0m[1;34mluigy     [0m[1;30m][0m [1;30m[ [0m[1;34mlinduxed  [0m[1;30m][0m [1;30m[ [0m[1;34mkipras`awa[0m[1;30m][0m 
+[1;30m[ [0m[1;34mhnrk_     [0m[1;30m][0m [1;30m[ [0m[1;34mEnigmagic [0m[1;30m][0m [1;30m[ [0m[1;34msurtn     [0m[1;30m][0m [1;30m[ [0m[1;34mRageD     [0m[1;30m][0m [1;30m[ [0m[1;34maatxe     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mrunawayfiv[0m[1;30m][0m [1;30m[ [0m[1;34mfoobars   [0m[1;30m][0m [1;30m[ [0m[1;34meddsteel  [0m[1;30m][0m [1;30m[ [0m[1;34moelewapper[0m[1;30m][0m [1;30m[ [0m[1;34mBiohazard [0m[1;30m][0m 
+[1;30m[ [0m[1;34mindifferne[0m[1;30m][0m [1;30m[ [0m[1;34mpharaun   [0m[1;30m][0m [1;30m[ [0m[1;34m__SiCC__  [0m[1;30m][0m [1;30m[ [0m[1;34mbriansteff[0m[1;30m][0m [1;30m[ [0m[1;34mwtw       [0m[1;30m][0m 
+[1;30m[ [0m[1;34mdatajerk  [0m[1;30m][0m [1;30m[ [0m[1;34mvqrs      [0m[1;30m][0m [1;30m[ [0m[1;34m5EXAANIJ9 [0m[1;30m][0m [1;30m[ [0m[1;34myarou     [0m[1;30m][0m [1;30m[ [0m[1;34mpalo      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mluite_    [0m[1;30m][0m [1;30m[ [0m[1;34mo`connor_ [0m[1;30m][0m [1;30m[ [0m[1;34mphadej    [0m[1;30m][0m [1;30m[ [0m[1;34mft        [0m[1;30m][0m [1;30m[ [0m[1;34markeet    [0m[1;30m][0m 
+[1;30m[ [0m[1;34madamCS    [0m[1;30m][0m [1;30m[ [0m[1;34mrelrod    [0m[1;30m][0m [1;30m[ [0m[1;34mglowcoil  [0m[1;30m][0m [1;30m[ [0m[1;34mdabukalam [0m[1;30m][0m [1;30m[ [0m[1;34mqmm       [0m[1;30m][0m 
+[1;30m[ [0m[1;34m[swift]   [0m[1;30m][0m [1;30m[ [0m[1;34macfoltzer [0m[1;30m][0m [1;30m[ [0m[1;34mkini      [0m[1;30m][0m [1;30m[ [0m[1;34mFuuzetsu  [0m[1;30m][0m [1;30m[ [0m[1;34mynyounuo  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mcocreature[0m[1;30m][0m [1;30m[ [0m[1;34mHijiri    [0m[1;30m][0m [1;30m[ [0m[1;34mtswett    [0m[1;30m][0m [1;30m[ [0m[1;34mKneiva    [0m[1;30m][0m [1;30m[ [0m[1;34mmarens    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mloupgaroub[0m[1;30m][0m [1;30m[ [0m[1;34mhsyl20    [0m[1;30m][0m [1;30m[ [0m[1;34mc_wraith  [0m[1;30m][0m [1;30m[ [0m[1;34mCGML      [0m[1;30m][0m [1;30m[ [0m[1;34mandjjj23  [0m[1;30m][0m 
+[1;30m[ [0m[1;34mp_q       [0m[1;30m][0m [1;30m[ [0m[1;34mbind1     [0m[1;30m][0m [1;30m[[1;36m@[0m[1;34mChanServ  [0m[1;30m][0m [1;30m[ [0m[1;34mgargawel  [0m[1;30m][0m [1;30m[ [0m[1;34mgeal      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mkjanosz   [0m[1;30m][0m [1;30m[ [0m[1;34mbogdantele[0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m [1;30m[[1;32mUsers[1;30m([0;32m#haskell[1;30m:[0;32m33[1;30m/[0;32m33[1;30m)][0;36m [0m
+[1;30m[ [0m[1;34mAWizzArd  [0m[1;30m][0m [1;30m[ [0m[1;34mkloeri    [0m[1;30m][0m [1;30m[ [0m[1;34mEwout     [0m[1;30m][0m [1;30m[ [0m[1;34mPHO       [0m[1;30m][0m [1;30m[ [0m[1;34mbrolin_emp[0m[1;30m][0m 
+[1;30m[ [0m[1;34msrk       [0m[1;30m][0m [1;30m[ [0m[1;34mmichalrus [0m[1;30m][0m [1;30m[ [0m[1;34mmrlase    [0m[1;30m][0m [1;30m[ [0m[1;34mDrezil    [0m[1;30m][0m [1;30m[ [0m[1;34mgnusosa   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mBelgarion0[0m[1;30m][0m [1;30m[ [0m[1;34mnewsham   [0m[1;30m][0m [1;30m[ [0m[1;34mdavl      [0m[1;30m][0m [1;30m[ [0m[1;34mdxtr      [0m[1;30m][0m [1;30m[ [0m[1;34mtomaw     [0m[1;30m][0m 
+[1;30m[ [0m[1;34mClint     [0m[1;30m][0m [1;30m[ [0m[1;34mzenzike   [0m[1;30m][0m [1;30m[ [0m[1;34mtimothyh  [0m[1;30m][0m [1;30m[ [0m[1;34msleepynate[0m[1;30m][0m [1;30m[ [0m[1;34mwz1000    [0m[1;30m][0m 
+[1;30m[ [0m[1;34mjordanlewi[0m[1;30m][0m [1;30m[ [0m[1;34mminad     [0m[1;30m][0m [1;30m[ [0m[1;34mRazorX    [0m[1;30m][0m [1;30m[ [0m[1;34mmasquerade[0m[1;30m][0m [1;30m[ [0m[1;34mTspoon_   [0m[1;30m][0m 
+[1;30m[ [0m[1;34mtek0      [0m[1;30m][0m [1;30m[ [0m[1;34morzo      [0m[1;30m][0m [1;30m[ [0m[1;34mSquarism  [0m[1;30m][0m [1;30m[ [0m[1;34mklugez    [0m[1;30m][0m [1;30m[ [0m[1;34mcpu1      [0m[1;30m][0m 
+[1;30m[ [0m[1;34mfall_     [0m[1;30m][0m [1;30m[ [0m[1;34mJonno_FTW [0m[1;30m][0m [1;30m[ [0m[1;34mkml       [0m[1;30m][0m 
+[1;31mù[0m[1;37mí[1;31mù[0m Channel #haskell was created at Sun Nov 26 00:42:48 2006
+[1;31mù[0m[1;37mí[1;31mù[0m URL [1;30m([0;36m#haskell[1;30m):[0m http://www.haskell.org/[0m
+[1;31mù[0m[1;37mí[1;31mù[0m BitchX: Join to #haskell was synched in 0.482 secs!!
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mafarmer[0m: #haskell [1;30m([0mPing timeout: 268 seconds[1;30m)[0m
+[1;33m#numerical [1;37mfDev2179  [0m [0;36mH   [0m~fDev2179[1;31m@[0mcpe-173-172-185-189.tx.res.rr.com (fDev2179)[0m
+[1;33m#numerical [1;37mpeterhil  [0m [0;36mH   [0m~peterhil[1;31m@[0mdsl-hkibrasgw2-58c37f-8.dhcp.inet.fi (Peter HillerstrÃ¶m)[0m
+[1;33m#numerical [1;37mhamishmack[0m [0;36mH   [0m~hamishmac[1;31m@[0m121-73-30-206.cable.telstraclear.net (Hamish Mackenzie)[0m
+[1;33m#numerical [1;37mnumberten [0m [0;36mH   [0m~numberten[1;31m@[0mec2-54-69-152-253.us-west-2.compute.amazonaws.com (Jesse)[0m
+[1;33m#numerical [1;37mmbrcknl   [0m [0;36mH   [0msid28171[1;31m@[0mgateway/web/irccloud.com/x-tdojepbjkolmgyzt (Matthew Brecknell)[0m
+[1;33m#numerical [1;37mClaudiusMa[0m [0;36mH   [0m~claude[1;31m@[0munaffiliated/claudiusmaximus (Claude)[0m
+[1;33m#numerical [1;37mhuonw_    [0m [0;36mH   [0m~huonw[1;31m@[0m2400:6180:0:d0::1aa:5001 (Huon Wilson)[0m
+[1;33m#numerical [1;37mAxman6    [0m [0;36mH   [0m~Axman6[1;31m@[0mpdpc/supporter/student/Axman6 (Alex Mason)[0m
+[1;33m#numerical [1;37mlambdabot [0m [0;36mH   [0m~lambdabot[1;31m@[0mhaskell/bot/lambdabot (Lambda_Robots:_100%_Loyal)[0m
+[1;33m#numerical [1;37mmartingale[0m [0;36mH   [0m~textual[1;31m@[0mpool-96-232-88-46.nycmny.fios.verizon.net (Textual User)[0m
+[1;33m#numerical [1;37mtautologic[0m [0;36mH   [0muid22285[1;31m@[0mgateway/web/irccloud.com/x-mbjmitnkrgijiukt (Iorek Byrnison)[0m
+[1;33m#numerical [1;37mjle`      [0m [0;36mG   [0m~mstksg[1;31m@[0munaffiliated/mstksg (= "Justin Le")[0m
+[1;33m#numerical [1;37mhappymons [0m [0;36mH   [0msid215239[1;31m@[0mgateway/web/irccloud.com/x-mawhzxinhlnykezn (Matthew Steffen)[0m
+[1;33m#numerical [1;37mcchalmers [0m [0;36mH   [0m~textual[1;31m@[0m158.125.32.71 (Textual User)[0m
+[1;33m#numerical [1;37mocharles  [0m [0;36mG   [0msid30093[1;31m@[0mmusicbrainz/user/ocharles (Oliver Charles)[0m
+[1;33m#numerical [1;37mmvr_      [0m [0;36mH   [0muid36976[1;31m@[0mgateway/web/irccloud.com/x-hqlbkqeadfveqyey (Mitchell)[0m
+[1;33m#numerical [1;37mmonad_cat [0m [0;36mG   [0msid157798[1;31m@[0mgateway/web/irccloud.com/x-sznkbufkiuijunro (Michal Kawalec)[0m
+[1;33m#numerical [1;37m{AS}      [0m [0;36mG   [0msid45026[1;31m@[0mgateway/web/irccloud.com/x-skdqcrouvgquhgim (Ahmad Salim)[0m
+[1;33m#numerical [1;37msclv      [0m [0;36mG   [0msid39734[1;31m@[0mhaskell/developer/sclv (sclv)[0m
+[1;33m#numerical [1;37mangerman  [0m [0;36mH   [0msid209936[1;31m@[0mgateway/web/irccloud.com/x-vhkfxoqmbeclxins (angerman)[0m
+[1;33m#numerical [1;37mtk_       [0m [0;36mH   [0m~tk[1;31m@[0m138.68.22.87 (tk)[0m
+[1;33m#numerical [1;37mdolio     [0m [0;36mH   [0m~dolio[1;31m@[0mhaskell/developer/dolio (Dan Doel)[0m
+[1;33m#numerical [1;37mmkloczko  [0m [0;36mH   [0m~mkloczko[1;31m@[0m84-10-58-70.static.chello.pl (Unknown)[0m
+[1;33m#numerical [1;37mgspia     [0m [0;36mH   [0m~gspia[1;31m@[0m91-159-242-107.elisa-laajakaista.fi (realname)[0m
+[1;33m#numerical [1;37mjackhill  [0m [0;36mH   [0m~jackhill[1;31m@[0mbog.hcoop.net (Jack Hill)[0m
+[1;33m#numerical [1;37malanz     [0m [0;36mH   [0malanz[1;31m@[0mgateway/shell/firrre/x-xrdfrtvplqrmtjst (alanz)[0m
+[1;33m#numerical [1;37mdylex     [0m [0;36mH   [0mdylex[1;31m@[0micicle.dylex.net (Dylan)[0m
+[1;33m#numerical [1;37milovezfs_ [0m [0;36mH   [0msid15973[1;31m@[0mgateway/web/irccloud.com/x-swcmzmgondgasqzu (ilovezfs_)[0m
+[1;33m#numerical [1;37metrepum   [0m [0;36mH   [0msid763[1;31m@[0mgateway/web/irccloud.com/x-fultubyblfqrlpxw (Bob Ippolito)[0m
+[1;33m#numerical [1;37mnkpart    [0m [0;36mG   [0msid3844[1;31m@[0mgateway/web/irccloud.com/x-voktlnppugcopncu (Nick Partridge)[0m
+[1;33m#numerical [1;37miross     [0m [0;36mH   [0m~iross[1;31m@[0mmail.skybluetrades.net (Ian Ross)[0m
+[1;33m#numerical [1;37malpounet  [0m [0;36mH   [0m~alp[1;31m@[0m62-210-84-239.rev.poneytelecom.eu (alp)[0m
+[1;33m#numerical [1;37mcarter    [0m [0;36mG   [0msid14827[1;31m@[0mgateway/web/irccloud.com/x-zbidfijbqxftxjgl (Carter Schonwald)[0m
+[1;33m#numerical [1;37mzxtx      [0m [0;36mH   [0m~zxtx[1;31m@[0msunnythinking.org (VVVV)[0m
+[1;33m#numerical [1;37maverell   [0m [0;36mH   [0m~averell[1;31m@[0munaffiliated/averell (Averell)[0m
+[1;33m#numerical [1;37mwjm       [0m [0;36mH   [0mwill[1;31m@[0m2600:3c03::f03c:91ff:fe6e:6c01 (will martino)[0m
+[1;33m#numerical [1;37mtolt      [0m [0;36mH   [0m~Kevin[1;31m@[0mli697-66.members.linode.com (Kevin)[0m
+[1;33m#numerical [1;37mcarter-znc[0m [0;36mH   [0mcarter[1;31m@[0m2600:3c03::f03c:91ff:fe6e:6c01 (Carter Schonwald)[0m
+[1;33m#numerical [1;37mnkartashov[0m [0;36mH   [0mnkartashov[1;31m@[0m2600:3c03::f03c:91ff:fe6e:6c01 (nikita kartashov)[0m
+[1;33m#numerical [1;37mmikeizbick[0m [0;36mG   [0mmikeizbick[1;31m@[0m2600:3c03::f03c:91ff:fe6e:6c01 (mike izbicki)[0m
+[1;33m#numerical [1;37mMarcelineV[0m [0;36mH   [0m~anja[1;31m@[0mS0106602ad0983de6.no.shawcable.net (anjana)[0m
+[1;33m#numerical [1;37mcarvite   [0m [0;36mH   [0m~carvite[1;31m@[0munaffiliated/stryx/x-3871776 (carvite)[0m
+[1;33m#numerical [1;37mwrengr_awa[0m [0;36mG   [0m~wrengr[1;31m@[0m104.132.1.65 (wren gayle romano)[0m
+[1;33m#numerical [1;37mpmn       [0m [0;36mH   [0mpatrick[1;31m@[0m2600:3c03::f03c:91ff:feac:766e (https://patrickmn.com/)[0m
+[1;33m#numerical [1;37mpeddie    [0m [0;36mH   [0m~peddie[1;31m@[0mrepl.esden.net (Matt Peddie)[0m
+[1;33m#numerical [1;37mbitemyapp [0m [0;36mH   [0m~bitemyapp[1;31m@[0m198.199.80.102 (bitemyapp)[0m
+[1;33m#numerical [1;37mrwbarton  [0m [0;36mH   [0m~rwbarton[1;31m@[0m163.172.172.96 (Reid Barton)[0m
+[1;33m#numerical [1;37mluite_    [0m [0;36mH   [0m~luite[1;31m@[0mluite.com (Luite Stegeman)[0m
+[1;33m#numerical [1;37markeet    [0m [0;36mH   [0m~arkeet[1;31m@[0munaffiliated/arkeet (Adrian)[0m
+[1;33m#numerical [1;37mrelrod    [0m [0;36mG   [0m~relrod[1;31m@[0mredhat/relrod (rickymain)[0m
+[1;33m#numerical [1;37mkini      [0m [0;36mH   [0m~kini[1;31m@[0munaffiliated/kini (Keshav Kini -- http://twitter.com/ffee_machine)[0m
+[1;33m#numerical [1;37mFuuzetsu  [0m [0;36mG   [0m~Shana[1;31m@[0m37.139.11.195 (Shana)[0m
+[1;33m#numerical [1;37mcocreature[0m [0;36mH   [0mX3XTtfrqnI[1;31m@[0mgateway/shell/uberspace.de/x-rutbwneieqhtymsc (Moritz Kiefer)[0m
+[1;33m#numerical [1;37mHijiri    [0m [0;36mH   [0m~Hijiri[1;31m@[0m104.236.61.10 (Hijiri)[0m
+[1;33m#numerical [1;37mChanServ  [0m [0;36mH@  [0mChanServ[1;31m@[0mservices. (Channel Services)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mj2j [1;30m[[0;36m~j2j@ool-4350545f.dyn.optonline.net[1;30m][0m has joined #haskell[0m
+[1;34m<[0mjordan335[1;34m>[0m nvm, program is the list that the alg should create[0m
+[1;34m<[0mEvanR[1;34m>[0m chatbot?[0m
+[1;35m<[0mfDev2179[1;35m>[0m Hello fellow haskellers.  I have a question about the best way to assemble a sparse matrix using the hmatrix library.[0m
+[1;34m<[0mReinH[1;34m>[0m @src elem[0m
+[1;34m<[0mlambdabot[1;34m>[0m elem x = any (== x)[0m
+[1;34m<[0mReinH[1;34m>[0m @src any[0m
+[1;34m<[0mlambdabot[1;34m>[0m any p = or . map p[0m
+[1;34m<[0mReinH[1;34m>[0m lol, down the rabbit-hole we go.[0m
+[1;34m<[0mReinH[1;34m>[0m @src or[0m
+[1;34m<[0mlambdabot[1;34m>[0m or = foldr (||) False[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mtripped [1;30m[[0;36m~trip@c-73-221-22-227.hsd1.wa.comcast.net[1;30m][0m has joined #haskell[0m
+[1;34m<[0mEvanR[1;34m>[0m ultimately... any list algorithm based on pattern matching is a fold[0m
+[1;34m<[0mReinH[1;34m>[0m So what you need is for the algorithm to be productive[0m
+[1;34m<[0mReinH[1;34m>[0m which essentially means that it needs foldr nature rather than foldl nature[0m
+[1;34m<[0mjordan335[1;34m>[0m well it doesnt have to be fast, it just has to terminate[0m
+[1;34m<[0mReinH[1;34m>[0m recursion has to be guarded by the (:) constructor[0m
+[1;34m<[0mReinH[1;34m>[0m I didn't say anything about speed.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mCoderPuppy[0m: #haskell [1;30m([0mPing timeout: 260 seconds[1;30m)[0m
+[1;34m<[0mjordan335[1;34m>[0m im trying to do this using list comprehension[0m
+[1;35m<[0mfDev2179[1;35m>[0m I am writing a finite element code in Haskell.  I am at the point where I need to assemble all the element stiffness matrices into a global matrix.  Problem is that I'm trying to do this in an immutable way.[0m
+[1;34m<[0mReinH[1;34m>[0m list comprehensions are productive[0m
+[1;34m<[1;33mpeddie[1;34m>[0m fDev2179: can you post your code?[0m
+[1;34m<[0mReinH[1;34m>[0m > take 10 $ [ x | x <- [1..10] ][0m
+[1;35m<[0mfDev2179[1;35m>[0m I have a sparsity pattern from the mesh so I know which entries are nonzero in the global stiffness matrix.  I'm storing the entries from the element stiffness matrices as [(Int, Int, Double)][0m
+[1;34m<[0mlambdabot[1;34m>[0m  [1,2,3,4,5,6,7,8,9,10][0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mm1dnight1 [1;30m[[0;36m~m1dnight@78-22-1-215.access.telenet.be[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m specifically, [ x | x <- xs ] is productive if xs is productive[0m
+[1;35m<[0mfDev2179[1;35m>[0m peddie, it is about 200 lines in several Modules.  I can post the link to the git repo.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mhalogenandtoast[0m: #haskell [1;30m([0mPing timeout: 255 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mpickyfingers [1;30m[[0;36m~quassel@pool-100-2-162-136.nycmny.fios.verizon.net[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m peddie, https://github.com/jgrisham4/hfem1d[0m
+[1;34m<[0mjordan335[1;34m>[0m the one dimensional case is easy[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mmizu_no_oto[0m: #haskell [1;30m([0mQuit: Computer has gone to sleep.[1;30m)[0m
+[1;34m<[0mjordan335[1;34m>[0m aufgabeE = [(a,b,c) | a <- [1..], b <- [1..], c <- [1..]][0m
+[1;34m<[0mjordan335[1;34m>[0m this doesnt terminate[0m
+[1;35m<[0mfDev2179[1;35m>[0m The whole code isn't necessary to understand my issue though.  I'll explain.[0m
+[1;34m<[0mjordan335[1;34m>[0m but i wish it would haha[0m
+[1;34m<[0mReinH[1;34m>[0m jordan335: ah, you need diagonalization.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mdeech [1;30m[[0;36m~user@24-216-78-72.dhcp.stls.mo.charter.com[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m http://stackoverflow.com/questions/32465776/getting-all-the-diagonals-of-a-matrix-in-haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mjer1 [1;30m[[0;36m~jer@103.7.29.9[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m Given a list of type [(Int, Int, Double)], which represents entries in a matrix in terms of row index, column index, and value, find all duplicate entries and sum the value to return one entry.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mlouispan [1;30m[[0;36m~textual@203.38.203.134[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m wait, no, that's the wrong diagonalization[0m
+[1;34m<[0mReinH[1;34m>[0m https://hackage.haskell.org/package/control-monad-omega-0.3.1/docs/Control-Monad-Omega.html[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mcdg[0m: #haskell [1;30m([0mPing timeout: 260 seconds[1;30m)[0m
+[1;34m<[0mdeech[1;34m>[0m Is there a way to get 'stack build' to show output from Cabal? For instance, show each module as it's compiling?[0m
+[1;35m<[0mfDev2179[1;35m>[0m I have one solution, but I'm not sure it is the best.  Also not sure if it works as it is just on paper.[0m
+[1;35m<[0mfDev2179[1;35m>[0m I should have said sum the duplicate entries to return one value for each entry in the matrix.[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: duplicate by value?[0m
+[1;35m<[0mfDev2179[1;35m>[0m Duplicate by row, column index.[0m
+[1;34m<[0mReinH[1;34m>[0m I don't follow.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mpickyfingers[0m: #haskell [1;30m([0mRemote host closed the connection[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m I usually assemble these matrices in C++ or Fortran using something like a += operator.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mgmcabrita[0m: #haskell [1;30m([0mQuit: Connection closed for inactivity[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mvaruaa[0m: #haskell [1;30m([0mQuit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mjustanotheruser[0m: #haskell [1;30m([0mPing timeout: 272 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mchu [1;30m[[0;36m~chu@unaffiliated/chu[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mvaruaa [1;30m[[0;36m~quassel@pool-100-2-162-136.nycmny.fios.verizon.net[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m However, since I'm using Haskell, I'd like to stick to immutable data structures.  I saw there is a mutable matrix in hmatrix, but I'd rather not go down that road.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mhalogenandtoast [1;30m[[0;36m~matthew-m@122x220x193x82.ap122.ftth.ucom.ne.jp[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m so your list contains duplicates or you have more than one list? Maybe I'm missing something.[0m
+[1;34m<[0mvaibhavsagar[1;34m>[0m deech: stack build --verbose?[0m
+[1;34m<[1;33mpeddie[1;34m>[0m fDev2179: I see what you're saying; what's your solution?  I'm thinking something like `groupBy` with `sort` to get lists of matching elements[0m
+[1;34m<[0mjordan335[1;34m>[0m how do i implement diagonalization?[0m
+[1;34m<[0mdeech[1;34m>[0m vaibhavsagar: Doesn't seem to do it. :([0m
+[1;35m<[0mfDev2179[1;35m>[0m ReinH, I have a list of (Int, Int, Double) which contain coordinates of entries in a matrix in terms of row indices, column indices and values.  [0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mfortruce[0m: #haskell [1;30m([0mQuit: My MacBook has gone to sleep. ZZZzzzâ€¦[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mjustanotheruser [1;30m[[0;36m~justanoth@unaffiliated/justanotheruser[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m I have duplicated entries and I want to sum those and eliminate the duplicates.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mjer1[0m: #haskell [1;30m([0mPing timeout: 246 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mjuanpaucar [1;30m[[0;36m~juanpauca@corp-190-57-158-6.uio.puntonet.ec[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m peddie,[0m
+[1;34m<[0mReinH[1;34m>[0m jordan335: see https://hackage.haskell.org/package/control-monad-omega-0.3.1/docs/Control-Monad-Omega.html[0m
+[1;35m<[0mfDev2179[1;35m>[0m peddie, My solution involves a list comprehension and a filter.[0m
+[1;34m<[0mpeddie[1;34m>[0m > map (foldr1 (\(x, y, a) (_, _, b) -> (x, y, a + b))) . groupBy (\(a, b, _) (c, d, _) -> (a, b) == (c, d)) . sort $ [(1, 2, 22.2), (2, 1, 33.3), (1, 2, 55.5)][0m
+[1;34m<[0mlambdabot[1;34m>[0m  [(1,2,77.7),(2,1,33.3)][0m
+[1;34m<[0morion[1;34m>[0m Anyone know the best place to get HaLVM support?[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: so are you trying to do better than groupBy and map sum?[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mystael [1;30m[[0;36m~ystael@209-6-53-93.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m orion: here, I guess, such as it is?[0m
+[1;35m<[0mfDev2179[1;35m>[0m My solution didn't use groupBy.  Did use sum though.  Lemme look at peddie's solution.[0m
+[1;34m<[0mglguy[1;34m>[0m orion: Probably the HaLVM mailing list[0m
+[1;31mù[0m[1;37mí[1;31mù[0m dalek_ [1;30m[[0m~dalek___@host86-157-218-109.range86-157.btcentralplus.com[1;30m][0m has left #haskell [1;30m[[1;37m"Leaving"[1;30m][0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mhalogenandtoast[0m: #haskell [1;30m([0mPing timeout: 240 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mtromp [1;30m[[0;36m~tromp@ool-944bc443.dyn.optonline.net[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m jordan335: the operative bit is `diagonal`, which you should look at if you want to understand how it works[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mjuanpaucar[0m: #haskell [1;30m([0mPing timeout: 246 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mcpennington[0m: #haskell [1;30m([0mRemote host closed the connection[1;30m)[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: groupBy and map sum would be the naive way[0m
+[1;35m<[0mfDev2179[1;35m>[0m ReinH, what would you suggest?[0m
+[1;34m<[0mReinH[1;34m>[0m Map (Int,Int) Double as a first attempt[0m
+[1;34m<[1;33mpeddie[1;34m>[0m fDev2179: you could also form a bunch of matrices and then sum them, and if it's too slow, then just do that sum in a mutable way[0m
+[1;35m<[0mfDev2179[1;35m>[0m I understand what you did there, peddie.  Thanks.  That is definitely cleaner than what I had.[0m
+[1;34m<[0mReinH[1;34m>[0m Actually, Map (Int,Int) (Sum Double) to get merging for free[0m
+[1;34m<[0mReinH[1;34m>[0m That at least gets you within a log factor of the mutable method[0m
+[1;35m<[0mfDev2179[1;35m>[0m peddie, I feel like that would take up an unnecessary amount of memory.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mystael[0m: #haskell [1;30m([0mPing timeout: 260 seconds[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m ReinH, how do you get merging for free?[0m
+[1;34m<[1;33mpeddie[1;34m>[0m fDev2179: would it?  if they're sparse matrices?[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mandyhuzhill[0m: #haskell [1;30m([0mPing timeout: 240 seconds[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m peddie, ahhhh true.[0m
+[1;35m<[0mfDev2179[1;35m>[0m That would probably be the easiest way.[0m
+[1;34m<[1;33mpeddie[1;34m>[0m fDev2179: actually I guess if they were all sparse matrices and you were mutating one of them, it's probably not too different from ReinH's solution with the Map.  but it might be a little shorter with the library[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37msystadmin[0m: #haskell [1;30m([0mPing timeout: 260 seconds[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m I still don't quite understand what ReinH wrote.  [0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: the Monoid isntance[0m
+[1;34m<[0mReinH[1;34m>[0m *instance[0m
+[1;35m<[0mfDev2179[1;35m>[0m Oh, not too familiar with monoids yet.[0m
+[1;34m<[1;33mpeddie[1;34m>[0m fDev2179: if you do it his way with Sum, you can simply merge the maps for each element's stiffness matrix using the built-in way of merging maps[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mtromp[0m: #haskell [1;30m([0mPing timeout: 260 seconds[1;30m)[0m
+[1;34m<[0mReinH[1;34m>[0m oh wait, that isn't the monoid instance[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mXanather [1;30m[[0;36m~Xanather@unaffiliated/xanather[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m the monoid instance is a merge that prefers values to the left over values to the right[0m
+[1;35m<[0mfDev2179[1;35m>[0m What is the built-in way of merging maps?[0m
+[1;34m<[0mpeddie[1;34m>[0m ReinH: I just made the same discovery :([0m
+[1;34m<[0mReinH[1;34m>[0m > fromList [("foo", "bar")] <> fromList [("foo", "baz")] :: Data.Map.Map String String[0m
+[1;34m<[0mlambdabot[1;34m>[0m  fromList [("foo","bar")][0m
+[1;34m<[0mReinH[1;34m>[0m peddie: that is sad[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mjmcarthur[0m: #haskell [1;30m([0mPing timeout: 272 seconds[1;30m)[0m
+[1;34m<[1;33mpeddie[1;34m>[0m fDev2179: ignore, it turns out that won't work after all[0m
+[1;34m<[0mReinH[1;34m>[0m I don't really understand this new merge machinery[0m
+[1;34m<[0mpeddie[1;34m>[0m ReinH: did the machinery change the instance?[0m
+[1;35m<[0mfDev2179[1;35m>[0m Okay.[0m
+[1;34m<[0mpeddie[1;34m>[0m ReinH: maybe you're referring to the Merge module?  no haddock docs :([0m
+[1;34m<[0mReinH[1;34m>[0m peddie: https://hackage.haskell.org/package/containers-0.5.10.2/docs/Data-Map-Merge-Lazy.html[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mtefter [1;30m[[0;36m~bmaxa@c-bg-d-p1-76.bvcom.net[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mdeech[0m: #haskell [1;30m([0mRemote host closed the connection[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mxcmw [1;30m[[0;36m~xcmw@cpe-69-133-63-88.cinci.res.rr.com[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mtromp [1;30m[[0;36m~tromp@ool-944bc443.dyn.optonline.net[1;30m][0m has joined #haskell[0m
+[1;34m<[0mpeddie[1;34m>[0m oh, I was looking for `Data.Map.Lazy.Merge` :)[0m
+[1;34m<[0mReinH[1;34m>[0m I just want merge :: Monoid m => Map k m -> Map k m -> Map k m :/[0m
+[1;34m<[0mpeddie[1;34m>[0m wow, this is complicated[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mj2j[0m: #haskell [1;30m([0mRemote host closed the connection[1;30m)[0m
+[1;34m<[0mpeddie[1;34m>[0m right[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mparsnip0 [1;30m[[0;36muid147265@gateway/web/irccloud.com/x-bfzintkklfislgqr[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m I think I understand what you're talking about now.  We are talking about a type Map, not a function which applies a function to a list.[0m
+[1;35m<[0mfDev2179[1;35m>[0m More like a C++ map?[0m
+[1;34m<[0mjordan335[1;34m>[0m [(a,b,c) | summe <- [3..], c <- [1..], b <- [1..], a <- [1..], a+b+c==summe][0m
+[1;34m<[0mjordan335[1;34m>[0m doesnt terminate : ([0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: yes, sorry, Map k v is a dictionary from k to v[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37msleffy[0m: #haskell [1;30m([0mPing timeout: 240 seconds[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m Okay, that makes a lot more sense![0m
+[1;35m<[0mfDev2179[1;35m>[0m I was a little lost.[0m
+[1;35m<[0mfDev2179[1;35m>[0m Thanks.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mContessaTP[0m: #haskell [1;30m([0mQuit: Take care <3[1;30m)[0m
+[1;34m<[0mReinH[1;34m>[0m it is a log factor slower than its mutable (like C++) equivalent[0m
+[1;34m<[0mkoala_man[1;34m>[0m I want my haskell program to crash in a way recognizable by fuzzers. How can I abort() or segfault or similar?[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: basically you merge maps into maps by summing the values[0m
+[1;35m<[0mfDev2179[1;35m>[0m Right.[0m
+[1;34m<[0mReinH[1;34m>[0m and you get better asymptotics[0m
+[1;34m<[0mc_wraith[1;34m>[0m jordan335: well..  Yeah, that's going to be problematic.  It'll output (1,1,1) and then...  nothing else?  (if I read it right)[0m
+[1;35m<[0mfDev2179[1;35m>[0m I follow now.  I didn't think about looking for a container.[0m
+[1;34m<[0mReinH[1;34m>[0m jordan335: Did you look at Omega?[0m
+[1;34m<[0mjordan335[1;34m>[0m yes but i didnt know how to use it[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: Ah! Often in functional programming the right data structure is just as important as the right algorithm, if not moreso[0m
+[1;35m<[0mfDev2179[1;35m>[0m For sure.  [0m
+[1;34m<[0mgeekosaur[1;34m>[0m koala_man, raiseSignal sigSEGV (https://downloads.haskell.org/~ghc/8.0.2/docs/html/libraries/unix-2.7.2.1/System-Posix-Signals.html)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mvaruaa[0m: #haskell [1;30m([0mPing timeout: 240 seconds[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m Scaling is important so I might try to find the right data structure before moving forward.  This code is a 1D code, but next I'm going to write a 3D code.[0m
+[1;34m<[0mkoala_man[1;34m>[0m geekosaur: perfect, thanks![0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mbaldrick1 [1;30m[[0;36m~duncan@2a01:e35:2e83:a840:d089:9101:900b:8fe6[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36macyed [1;30m[[0;36m~acyed@2604:2d80:841a:80b3:bce2:cba2:cf07:1fbc[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m ReinH, any suggestions on where to look for something that merges the way I want?[0m
+[1;34m<[0mjordan335[1;34m>[0m c_wraith yeah i think thats the problem[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mjer1 [1;30m[[0;36m~jer@103.7.29.9[1;30m][0m has joined #haskell[0m
+[1;34m<[0mc_wraith[1;34m>[0m jordan335: that quick & dirty solution is to apply some domain knowledge.  You know that adding two positive numbers must always result in a positive number greater than either input.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mcarlomagno[0m: #haskell [1;30m([0mRemote host closed the connection[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36msleffy [1;30m[[0;36m~sleffy@c-24-7-67-0.hsd1.ca.comcast.net[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mpavonia [1;30m[[0;36m~user@unaffiliated/siracusa[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m jordan335: Oh, yeah, it's just fold[0m
+[1;34m<[0mc_wraith[1;34m>[0m jordan335: so you can do something like [(a,b,c) | summe <- [3..], c <- [1..summe], b <- [1..summe], a <- [1..summe], a+b+c==summe][0m
+[1;34m<[0mReinH[1;34m>[0m Wait, no it isn't[0m
+[1;34m<[0mReinH[1;34m>[0m sorry[0m
+[1;34m<[0mc_wraith[1;34m>[0m jordan335: it's still not completely efficient, but it will be productive[0m
+[1;34m<[0mReinH[1;34m>[0m ugh one sec[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: I guess somewhere in https://hackage.haskell.org/package/containers-0.5.10.2/docs/Data-Map-Merge-Lazy.html[0m
+[1;34m<[0mjordan335[1;34m>[0m thats exactly what i was looking for c_wraith[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37macyed[0m: #haskell [1;30m([0mClient Quit[1;30m)[0m
+[1;34m<[0mjordan335[1;34m>[0m thanks a lot, that was a good idea[0m
+[1;35m<[0mfDev2179[1;35m>[0m Thanks, ReinH and peddie.  I need to learn more about containers provided by the language.[0m
+[1;34m<[0mReinH[1;34m>[0m wow, it has all this merge machinery but not a simple merge of monoidal values[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: not by the language, by libraries![0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mSnircle[0m: #haskell [1;30m([0mQuit: Textual IRC Client: www.textualapp.com[1;30m)[0m
+[1;34m<[0mc_wraith[1;34m>[0m jordan335: do you see why that version makes progress?[0m
+[1;35m<[0mfDev2179[1;35m>[0m Okay, true.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mcarlomagno [1;30m[[0;36m~cmagno@inet-hqmc01-o.oracle.com[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m this is one of the advantages of Haskell for me, that user-defined data structures can be efficient in a high level language.[0m
+[1;35m<[0mfDev2179[1;35m>[0m Just saw that's the containers library. [0m
+[1;34m<[0mReinH[1;34m>[0m which is why I mentioned the distinction[0m
+[1;35m<[0mfDev2179[1;35m>[0m Definitely agree. [0m
+[1;35m<[0mfDev2179[1;35m>[0m It is really surprising as it would be very difficult to achieve something similar in C++.  [0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mjer1[0m: #haskell [1;30m([0mPing timeout: 268 seconds[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m Glad to know it is possible for that type of efficiency to exist in user-defined data structures.[0m
+[1;34m<[0mjordan335[1;34m>[0m yes it doesnt get stuck[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mNeverDie[0m: #haskell [1;30m([0mQuit: http://radiux.io/[1;30m)[0m
+[1;34m<[0mc_wraith[1;34m>[0m Oh, don't be mistaken.  It's not *easy* in Haskell either.  It takes a lot of benchmarking and experimenting. :)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mflatmap13 [1;30m[[0;36m~flatmap13@2601:647:4680:f010:b826:fdbc:9408:55e0[1;30m][0m has joined #haskell[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: Oh, it's just unionWith (+)[0m
+[1;35m<[0mfDev2179[1;35m>[0m c_wraith, something I need to learn more about.  haha[0m
+[1;34m<[0mReinH[1;34m>[0m I'm so sorry, I must be having a brain aneurism[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mcrobbins[0m: #haskell [1;30m([0mPing timeout: 240 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mericsagnes[0m: #haskell [1;30m([0mPing timeout: 260 seconds[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m So, I need to define a Map whose keys are the row and column indices and values are the entries and then use unionWith to merge the Maps, right ReinH?[0m
+[1;35m<[0mfDev2179[1;35m>[0m Whose key is a tuple of the row, and column indices, that is.[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: use fromList and convert (a,b,c) into ((a,b),c)[0m
+[1;35m<[0mfDev2179[1;35m>[0m Okay cool.[0m
+[1;35m<[0mfDev2179[1;35m>[0m Thanks, ReinH![0m
+[1;34m<[0mReinH[1;34m>[0m > fromList [((1,2),"hello")] :: Data.Map.Map (Int,Int) String[0m
+[1;34m<[0mlambdabot[1;34m>[0m  fromList [((1,2),"hello")][0m
+[1;34m<[0mReinH[1;34m>[0m > unionWith mappend (fromList [((1,2),"hello")]) (fromList [((1,2)," world")]) :: Data.Map.Map (Int,Int) String[0m
+[1;34m<[0mlambdabot[1;34m>[0m  error:[0m
+[1;34m<[0mlambdabot[1;34m>[0m      â€¢ Variable not in scope:[0m
+[1;34m<[0mlambdabot[1;34m>[0m          unionWith[0m
+[1;34m<[0mReinH[1;34m>[0m > Data.Map.unionWith mappend (fromList [((1,2),"hello")]) (fromList [((1,2)," world")]) :: Data.Map.Map (Int,Int) String[0m
+[1;34m<[0mlambdabot[1;34m>[0m  fromList [((1,2),"hello world")][0m
+[1;34m<[0mReinH[1;34m>[0m tada![0m
+[1;35m<[0mfDev2179[1;35m>[0m Sweet![0m
+[1;35m<[0mfDev2179[1;35m>[0m I will definitely use that.  Thanks again![0m
+[1;34m<[0mReinH[1;34m>[0m you can use Map (Int,Int) Double and unionWith (+) or Map (Int,Int) (Sum Double) and unionWith mappend and get it 'for free'.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37macertain[0m: #haskell [1;30m([0mPing timeout: 255 seconds[1;30m)[0m
+[1;34m<[1;33mReinH[1;34m>[0m fDev2179: yw[0m
+[1;34m<[0mReinH[1;34m>[0m hmm, I would also suggest strict maps for this, I think[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36merisco [1;30m[[0;36m~erisco@198-84-152-248.cpe.teksavvy.com[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m and you may need to do extra work to make the values strict as well[0m
+[1;34m<[0mReinH[1;34m>[0m to avoid building up thunks[0m
+[1;34m<[0mReinH[1;34m>[0m but that's the basic idea[0m
+[1;35m<[0mfDev2179[1;35m>[0m Strict meaning...[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mJeanCarloMachado[0m: #haskell [1;30m([0mPing timeout: 268 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mJeanCarloMachado [1;30m[[0;36m~jean@177.79.69.46[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m you want your maps storing the result of 1 + 2 directly rather than a thunk representing the computation 1 + 2[0m
+[1;35m<[0mfDev2179[1;35m>[0m Oh, I wasn't familiar with the term thunk.  You mean we don't want to delay evaluation, right?[0m
+[1;34m<[0mReinH[1;34m>[0m haskell uses 'thunks' to represent unevaluated expressions[0m
+[1;34m<[0mReinH[1;34m>[0m you don't want to store thunks in your maps, you want to evaluate them and store the result[0m
+[1;35m<[0mfDev2179[1;35m>[0m Definitely agree.  Thanks.  Time to go read some documentation![0m
+[1;34m<[0mReinH[1;34m>[0m i.e., the difference between foldl and foldl'[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mandyhuzhill [1;30m[[0;36m~Thunderbi@14.23.45.178[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mJeanCarl1Machado[0m: #haskell [1;30m([0mPing timeout: 246 seconds[1;30m)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36msystadmin [1;30m[[0;36m~systadmin@112.198.73.129[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m Learning all kinds of good stuff today.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36macertain [1;30m[[0;36m~acertain@unaffiliated/fread2281[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mJeanCarl1Machado [1;30m[[0;36m~jean@177.79.72.70[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m so, e.g., unionWith add where add x y = x `seq` y `seq` x + y, or add !x !y = x + y (using BangPatterns)[0m
+[1;34m<[0mReinH[1;34m>[0m although tbh you might end up just wanting to use ST and a mutable array...[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mXanather[0m: #haskell [1;30m([0mQuit: Leaving[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m Another newbie question, what is ST?[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mhybrid [1;30m[[0;36m~anon@c-73-66-52-86.hsd1.ca.comcast.net[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m sorry[0m
+[1;35m<[0mfDev2179[1;35m>[0m No worries![0m
+[1;34m<[0mReinH[1;34m>[0m ST is a monad for encapsulating mutation, more or less.[0m
+[1;34m<[0mReinH[1;34m>[0m ST means strict threads (for state)[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mtromp[0m: #haskell [1;30m([0mRemote host closed the connection[1;30m)[0m
+[1;34m<[0mReinH[1;34m>[0m it gives you things like mutable arrays where mutation isn't observable outside of the ST action[0m
+[1;34m<[0mReinH[1;34m>[0m principled mutation, you might say[0m
+[1;34m<[0merisco[1;34m>[0m simplest is bestest if you're learning[0m
+[1;35m<[0mfDev2179[1;35m>[0m Okay.  I'd like to do this in such a way that it is easy to parallelize later on.[0m
+[1;34m<[0mReinH[1;34m>[0m all of these methods would leave that door open[0m
+[1;35m<[0mfDev2179[1;35m>[0m That's why I was trying to stick with immutable data structures.  Wasn't aware this approach would leave that door open.  [0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mvaruaa [1;30m[[0;36m~quassel@pool-100-2-162-136.nycmny.fios.verizon.net[1;30m][0m has joined #haskell[0m
+[1;35m<[0mfDev2179[1;35m>[0m Then again, I have no experience writing parallel code in Haskell.  All my experience is in other languages using MPI and OpenMP.  I was just planning to learn it later.[0m
+[1;34m<[0mReinH[1;34m>[0m well, with ST you will have to do a bit more work to divide up the problem into parallelizable chunks[0m
+[1;34m<[0mReinH[1;34m>[0m @google parallel and concurrent programming in Haskell[0m
+[1;34m<[0mlambdabot[1;34m>[0m http://chimera.labs.oreilly.com/books/1230000000929[0m
+[1;34m<[0mlambdabot[1;34m>[0m Title: Parallel and Concurrent Programming in Haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36motto_s_ [1;30m[[0;36m~user@xd9331204.dyn.telefonica.de[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mjao[0m: #haskell [1;30m([0mPing timeout: 268 seconds[1;30m)[0m
+[1;34m<[0mReinH[1;34m>[0m Here's a free book by one of the primary authors of GHC's runtime system and its parallel/concurrent bits and bobs.[0m
+[1;34m<[0mReinH[1;34m>[0m on, you know, that[0m
+[1;34m<[0mReinH[1;34m>[0m it's one of my favorite Haskell books[0m
+[1;35m<[0mfDev2179[1;35m>[0m Yeah, already have that book on my favorites bar.  Just trying to make sure I've got the basics down before I dive into it.[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mxiinotulp [1;30m[[0;36m~q@node-5sr.pool-125-25.dynamic.totbb.net[1;30m][0m has joined #haskell[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [1;36mharfangk [1;30m[[0;36m~harfangk@222.110.160.66[1;30m][0m has joined #haskell[0m
+[1;34m<[0mReinH[1;34m>[0m it's a good way to learn the basics[0m
+[1;34m<[0mReinH[1;34m>[0m it doesn't assume a lot of Haskell knowledge[0m
+[1;31mù[0m[1;37mí[1;31mù[0m [0mSignOff [1;37mtwomix[0m: #haskell [1;30m([0mQuit: Connection closed for inactivity[1;30m)[0m
+[1;35m<[0mfDev2179[1;35m>[0m Okay, cool.  I'll check it out after I finish this 1D code.  [0m
+[1;34m<[0mReinH[1;34m>[0m good luck![0m
+[1;35m<[0mfDev2179[1;35m>[0m Thanks, ReinH, and thanks for your patience/help! [0m
+[1;34m<[0mReinH[1;34m>[0m you're quite welcome[0m
+[1;31mù[0m[1;37mí[1;31mù[0m BitchX: Ambiguous command: E
+[1;35m<[0mfDev2179[1;35m>[0m \e[0m
+IRC log ended Tue May 16 22:52:44 2017
