@@ -2,6 +2,7 @@ module Solver
 where
 
 import Data.List
+import System.IO
 import Numeric.LinearAlgebra.Data
 import Numeric.LinearAlgebra.HMatrix
 import Mesh
@@ -37,8 +38,8 @@ elemLoadIntegrand elem xi = fromList [interp sourceTerm elem xi | i <- [0..1]]
 
 -- This function integrates an element when provided with the element and the
 -- number of Gauss points.
-integrateElement :: Mesh.Element -> Int -> (Matrix Double, Vector Double)
-integrateElement elem npts = (stiffnessMat, loadVec)
+integrateElement :: Int -> Mesh.Element -> (Matrix Double, Vector Double)
+integrateElement npts elem = (stiffnessMat, loadVec)
   where
     gaussData    = getGaussPoints npts
     gPoints      = fst gaussData
@@ -49,14 +50,54 @@ integrateElement elem npts = (stiffnessMat, loadVec)
     stiffnessMat = scalar detJ * foldl (+) zmat [scalar (gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
     loadVec      = scalar detJ * foldl (+) zvec [scalar (gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
 
--- This function takes an AssocMatrix and sums duplicate entries
-computeUnique :: [((Int, Int), Double)] -> [((Int, Int), Double)]
+-- This function takes an entry in a matrix or vector and sums duplicate entries
+computeUnique :: (Ord t) => [(t, Double)] -> [(t, Double)]
 computeUnique = map (foldr1 (\(coord, v1) (_, v2) -> (coord, v1 + v2))) . groupBy (\(a,_) (b,_) -> a == b) . sort
 
----- Function for assembling the global stiffness matrix
---assembleGlobalStiffness :: [Matrix Double] -> Mesh -> GMatrix
---assembleGlobalStiffness Ke grid = mkSparse $ computeUnique $ concat [[((connectivity (elements !! en) !! i, connectivity (elements !! en) !! j), atIndex (Ke !! en) (i,j)), i <- [0..(order grid)], j <- [0..(order grid)] | en <- (length (elements grid) - 1)]
---
+-- Function for assembling the linear system of equations
+assembleLinearSystem :: [(Matrix Double, Vector Double)] -> Mesh -> (AssocMatrix, [(Int, Double)])
+assembleLinearSystem elemData grid = (globalK, globalF)
+  where
+    elemCon   = map getNodeNumbers $ elements grid
+    elemOrder = order grid
+    nelem     = length $ elements grid
+    elemK     = map fst elemData
+    elemF     = map snd elemData
+    globalK   = computeUnique $ concat [[(((elemCon !! en) !! i, (elemCon !! en) !! j), atIndex (elemK !! en) (i,j)) | i <- [0..elemOrder], j <- [0..elemOrder]] | en <- [0..(nelem - 1)]]
+    globalF   = sortOn fst $ computeUnique $ concat [[(elemCon !! en !! i, atIndex (elemF !! en) i) | i <- [0..elemOrder]] | en <- [0..(nelem - 1)]]
+
+applyBoundaryConditions :: (AssocMatrix, [(Int, Double)]) -> (GMatrix, Vector Double)
+applyBoundaryConditions unconstData = (newMat, newVec)
+  where
+    unconstMat = fst unconstData
+    unconstVec = snd unconstData
+    numNodes = length unconstVec
+    zeroedMat = filter (\ entry -> fst (fst entry) /= 0 && fst (fst entry) /= (numNodes-1)) unconstMat
+    zeroedVec = filter(\ entry -> fst entry /= 0 && fst entry /= (numNodes-1)) unconstVec
+    newMat = mkSparse $ ((0,0), 1.0) : ((numNodes-1,numNodes-1), 1.0) : zeroedMat
+    newVec = fromList $ map snd $ sortOn fst $ (0, 0.0) : (numNodes-1, 0.0) : zeroedVec
+
+-- Function for solving the problem
+femSolve :: Mesh -> Int -> Vector Double
+femSolve grid ngpts = cgSolve False cStiffnessMat cLoadVec
+  where
+    elemData = map (integrateElement ngpts) (elements grid)
+    globalData = assembleLinearSystem elemData grid
+    stiffnessMat = fst globalData
+    loadVec = snd globalData
+    constrainedData = applyBoundaryConditions (stiffnessMat, loadVec)
+    cStiffnessMat = fst constrainedData
+    cLoadVec = snd constrainedData
+
+-- Function for writing solution to file for plotting
+writeSolution :: String -> Mesh -> Vector Double -> IO()
+writeSolution fileName grid soln = writeFile fileName fileStr
+  where
+    uniqueNodes = nub $ concatMap nodes $ elements grid
+    nNodes = length uniqueNodes
+    nodeCoords = map coordinates uniqueNodes
+    lines = [show (head (nodeCoords !! nn)) ++ " " ++ show (atIndex soln nn) ++ "\n" | nn <- [0..(nNodes-1)]]
+    fileStr = concat lines
 
 -- fromList [((1,2),"hello")] :: Data.Map.Map (Int,Int) String
 -- Strict map.

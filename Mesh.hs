@@ -17,7 +17,7 @@ import Data.List
 data Node = Node {
   nodeNumber  :: Int,
   coordinates :: [Double]
-} deriving (Show)
+} deriving (Show,Eq)
 
 -- Type for element - holds a list of nodes
 data Element = Element {
