@@ -21,20 +21,20 @@ data Node = Node {
 
 -- Type for element - holds a list of nodes
 data Element = Element {
-  nodes :: [Node],
-  elemNumber :: Int
+  nodes      :: [Node],
+  elemNumber :: Int,
+  order      :: Int
 } deriving (Show)
 
 -- Type for mesh
-data Mesh = Mesh {
-  elements :: [Element],
-  order    :: Int
+newtype Mesh = Mesh {
+  elements :: [Element]
 } deriving (Show)
 
 -- Function for computing the Jacobian
 -- Only works for linear basis
 computeJacobianDet :: Element -> Double
-computeJacobianDet elem = (head (coordinates firstNode) - head (coordinates lastNode)) / 2.0
+computeJacobianDet elem = (head (coordinates lastNode) - head (coordinates firstNode)) / 2.0
   where
     elemNodes = nodes elem
     firstNode = head elemNodes
@@ -66,7 +66,7 @@ generateConnectivity order nelem = [map (\ x -> x + (length localConnectivity - 
 
 -- Function for generating a mesh
 generateMesh :: Double -> Double -> Int -> Int -> Mesh
-generateMesh xMin xMax nElem order = Mesh [Element [nodes !! i | i <- connectivity !! elemNum] elemNum | elemNum <- [0..(nElem-1)]] order
+generateMesh xMin xMax nElem order = Mesh [Element [nodes !! i | i <- connectivity !! elemNum] elemNum order | elemNum <- [0..(nElem-1)]]
   where
     nNodesMesh = numNodesMesh nElem order
     node_coords = linspace xMin xMax nNodesMesh
@@ -92,10 +92,3 @@ globalToLocal globalNodeNum grid = [(map elemNumber matchingElems !! mn, localNo
   where
     matchingElems = filter (\ e -> globalNodeNum `elem` getNodeNumbers e) $ elements grid
     localNodeNums = concat [[i | i <- [0..(length nodeList - 1)], nodeNumber (nodeList !! i) == globalNodeNum] | nodeList <- map nodes matchingElems]
-
--- Given a mesh, this function computes the unique i-j entries
-buildSparsityPattern :: Mesh -> [(Int, Int)]
-buildSparsityPattern grid = Data.List.nub $ concat [[((con !! k) !! i, (con !! k) !! j) | i <- [0..(order grid)], j <- [0..(order grid)]] | k <- [0..(numElem-1)]]
-  where
-    numElem = length $ elements grid
-    con = map getNodeNumbers $ elements grid

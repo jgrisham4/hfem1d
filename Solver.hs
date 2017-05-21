@@ -12,29 +12,33 @@ import ShapeFcns
 -- Given the number of points it returns a list of the points and the weights
 getGaussPoints :: Int -> ([Double], [Double])
 getGaussPoints 1 = ([0.0], [2.0])
-getGaussPoints 2 = ([-0.577350269189626, -0.577350269189626], [1.0, 1.0])
+getGaussPoints 2 = ([-0.577350269189626, 0.577350269189626], [1.0, 1.0])
+getGaussPoints 3 = ([-0.774596669241483, 0.0, 0.774596669241483], [0.555555555555555, 0.888888888888889, 0.555555555555555])
 getGaussPoints _ = error "Gauss points only up to 2 point quadrature available."
 
 -- Definition of source term
 sourceTerm :: Double -> Double
-sourceTerm x = x * x
+sourceTerm x = - x * x
 
--- Function for interpolating a function using the linear basis
+-- Function for interpolating a function using the basis
 interp :: (Double -> Double) -> Mesh.Element -> Double -> Double
-interp f elem xi = sum [f (nodalCoords !! i) * psi xi i | i <- [0..1]]
+interp f elem xi = sum [f (nodalCoords !! i) * psi xi i | i <- [0..(order elem)]]
   where
     nodalCoords = map (head . coordinates) $ nodes elem
 
 -- This function samples an element stiffness integrand
 -- It returns a matrix which represents the contribution of the
 -- present element to the global stiffness matrix
--- Only works for linear elements.  i and j should go from 0 to order
 elemStiffnessIntegrand :: Mesh.Element -> Double -> Matrix Double
-elemStiffnessIntegrand elem xi = fromLists [[psi xi i * psi xi j - dpsi xi i * dpsi xi j | i <- [0..1]] | j <- [0..1]]
+elemStiffnessIntegrand elem xi = scalar detJ * fromLists [[psi xi i * psi xi j + dpsi xi i * dpsi xi j | i <- [0..(order elem)]] | j <- [0..(order elem)]]
+  where
+    detJ = computeJacobianDet elem
 
 -- This function samples the element load integrand
 elemLoadIntegrand :: Mesh.Element -> Double -> Vector Double
-elemLoadIntegrand elem xi = fromList [interp sourceTerm elem xi | i <- [0..1]]
+elemLoadIntegrand elem xi = scalar detJ * fromList [interp sourceTerm elem xi * psi xi j | j <- [0..(order elem)]]
+  where
+    detJ = computeJacobianDet elem
 
 -- This function integrates an element when provided with the element and the
 -- number of Gauss points.
@@ -44,11 +48,10 @@ integrateElement npts elem = (stiffnessMat, loadVec)
     gaussData    = getGaussPoints npts
     gPoints      = fst gaussData
     gWeights     = snd gaussData
-    detJ         = computeJacobianDet elem
     zmat         = fromLists [[0.0, 0.0], [0.0, 0.0]] :: Matrix Double
     zvec         = fromList [0.0, 0.0] :: Vector Double
-    stiffnessMat = scalar detJ * foldl (+) zmat [scalar (gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
-    loadVec      = scalar detJ * foldl (+) zvec [scalar (gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    stiffnessMat = foldl' (+) zmat [scalar (gWeights !! i) * elemStiffnessIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
+    loadVec      = foldl' (+) zvec [scalar (gWeights !! i) * elemLoadIntegrand elem (gPoints !! i) | i <- [0..(npts-1)]]
 
 -- This function takes an entry in a matrix or vector and sums duplicate entries
 computeUnique :: (Ord t) => [(t, Double)] -> [(t, Double)]
@@ -58,13 +61,13 @@ computeUnique = map (foldr1 (\(coord, v1) (_, v2) -> (coord, v1 + v2))) . groupB
 assembleLinearSystem :: [(Matrix Double, Vector Double)] -> Mesh -> (AssocMatrix, [(Int, Double)])
 assembleLinearSystem elemData grid = (globalK, globalF)
   where
-    elemCon   = map getNodeNumbers $ elements grid
-    elemOrder = order grid
+    elems     = elements grid
+    elemCon   = map getNodeNumbers elems
     nelem     = length $ elements grid
     elemK     = map fst elemData
     elemF     = map snd elemData
-    globalK   = computeUnique $ concat [[(((elemCon !! en) !! i, (elemCon !! en) !! j), atIndex (elemK !! en) (i,j)) | i <- [0..elemOrder], j <- [0..elemOrder]] | en <- [0..(nelem - 1)]]
-    globalF   = sortOn fst $ computeUnique $ concat [[(elemCon !! en !! i, atIndex (elemF !! en) i) | i <- [0..elemOrder]] | en <- [0..(nelem - 1)]]
+    globalK   = computeUnique $ concat [[(((elemCon !! en) !! i, (elemCon !! en) !! j), atIndex (elemK !! en) (i,j)) | i <- [0..(order $ elems !! en)], j <- [0..(order $ elems !! en)]] | en <- [0..(nelem - 1)]]
+    globalF   = sortOn fst $ computeUnique $ concat [[(elemCon !! en !! i, atIndex (elemF !! en) i) | i <- [0..(order $ elems !! en)]] | en <- [0..(nelem - 1)]]
 
 applyBoundaryConditions :: (AssocMatrix, [(Int, Double)]) -> (GMatrix, Vector Double)
 applyBoundaryConditions unconstData = (newMat, newVec)
