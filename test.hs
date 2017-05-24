@@ -17,7 +17,7 @@ import Solver
 
 main = do
   let ngpts = 3
-  let grid = generateMesh 0.0 1.0 10 1
+  let grid = generateMesh 0.0 1.0 5 1
   let elemData = map (integrateElement ngpts) (elements grid)
   print $ fst $ elemData !! 1
   --let globalData = assembleLinearSystem elemData grid

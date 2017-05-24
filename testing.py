@@ -2,7 +2,7 @@
 
 import sys
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def source(x):
     """
@@ -53,10 +53,10 @@ intSource.append(interpSource(source, -1.0, nodalCoords))
 intSource.append(interpSource(source, 1.0, nodalCoords))
 
 # Plotting
-xvec = np.linspace(0.3, 0.6, 30)
-yvec = source(xvec)
-plt.plot(xvec,yvec)
-plt.plot(nodalCoords, intSource, "--r")
+#xvec = np.linspace(0.3, 0.6, 30)
+#yvec = source(xvec)
+#plt.plot(xvec,yvec)
+#plt.plot(nodalCoords, intSource, "--r")
 
 # Computing entries in the stiffness matrix
 x1 = 0.2
@@ -73,8 +73,6 @@ for gpt, gw in zip(gpts, gwgts):
             K[i, j] += gw*integrand(gpt, i, j)
 
 K *= detJ
-
 print(K)
 
 #plt.show()
-
