@@ -59,8 +59,8 @@ intSource.append(interpSource(source, 1.0, nodalCoords))
 #plt.plot(nodalCoords, intSource, "--r")
 
 # Computing entries in the stiffness matrix
-x1 = 0.2
-x2 = 0.4
+x1 = 0.0
+x2 = 1.0
 detJ = (x2 - x1)/2.0
 gpts = [0.0]
 gwgts = [2.0]
@@ -72,7 +72,7 @@ for gpt, gw in zip(gpts, gwgts):
         for j in range(2):
             K[i, j] += gw*integrand(gpt, i, j)
 
-K *= detJ
+#K *= detJ
 print(K)
 
 #plt.show()

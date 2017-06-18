@@ -15,6 +15,7 @@ import Mesh
 import Solver
 
 main = do
-  let grid = generateMesh 0.0 1.0 100 1
-  let soln = femSolve grid 3
+  let ngpts = 3
+  let grid = generateMesh 0.0 1.0 50 1
+  let soln = femSolve grid ngpts
   writeSolution "linear.dat" grid soln

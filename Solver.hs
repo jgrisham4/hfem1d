@@ -14,15 +14,15 @@ getGaussPoints :: Int -> ([Double], [Double])
 getGaussPoints 1 = ([0.0], [2.0])
 getGaussPoints 2 = ([-0.577350269189626, 0.577350269189626], [1.0, 1.0])
 getGaussPoints 3 = ([-0.774596669241483, 0.0, 0.774596669241483], [0.555555555555555, 0.888888888888889, 0.555555555555555])
-getGaussPoints _ = error "Gauss points only up to 2 point quadrature available."
+getGaussPoints _ = error "Gauss points only up to 3 point quadrature available."
 
 -- Definition of source term
 sourceTerm :: Double -> Double
-sourceTerm x = - x * x
+sourceTerm x = x * x
 
 -- Function for interpolating a function using the basis
 interp :: (Double -> Double) -> Mesh.Element -> Double -> Double
-interp f elem xi = sum [f (nodalCoords !! i) * psi xi i | i <- [0..(order elem)]]
+interp f elem xi = sum [sourceTerm (sum [nodalCoords !! j * psi xi j | j <- [0..(order elem)]]) * psi xi i | i <- [0..(order elem)]]
   where
     nodalCoords = map (head . coordinates) $ nodes elem
 
@@ -30,14 +30,16 @@ interp f elem xi = sum [f (nodalCoords !! i) * psi xi i | i <- [0..(order elem)]
 -- It returns a matrix which represents the contribution of the
 -- present element to the global stiffness matrix
 elemStiffnessIntegrand :: Mesh.Element -> Double -> Matrix Double
-elemStiffnessIntegrand elem xi = scalar detJ * fromLists [[psi xi i * psi xi j + dpsi xi i * dpsi xi j | i <- [0..(order elem)]] | j <- [0..(order elem)]]
+elemStiffnessIntegrand elem xi = fromLists [[detJ * psi xi i * psi xi j + 1.0/detJ * dpsi xi i * dpsi xi j | i <- [0..(order elem)]] | j <- [0..(order elem)]]
   where
     detJ = computeJacobianDet elem
 
 -- This function samples the element load integrand
 elemLoadIntegrand :: Mesh.Element -> Double -> Vector Double
-elemLoadIntegrand elem xi = scalar detJ * fromList [interp sourceTerm elem xi * psi xi j | j <- [0..(order elem)]]
+--elemLoadIntegrand elem xi = scalar (interp sourceTerm elem xi * detJ) * fromList [psi xi j | j <- [0..(order elem)]]
+elemLoadIntegrand elem xi = scalar detJ * fromList [sourceTerm (sum [nodalCoords !! j * psi xi j | j <- [0..(order elem)]]) * psi xi j | j <- [0..(order elem)]]
   where
+    nodalCoords = map (head . coordinates) $ nodes elem
     detJ = computeJacobianDet elem
 
 -- This function integrates an element when provided with the element and the
@@ -69,39 +71,37 @@ assembleLinearSystem elemData grid = (globalK, globalF)
     globalK   = computeUnique $ concat [[(((elemCon !! en) !! i, (elemCon !! en) !! j), atIndex (elemK !! en) (i,j)) | i <- [0..(order $ elems !! en)], j <- [0..(order $ elems !! en)]] | en <- [0..(nelem - 1)]]
     globalF   = sortOn fst $ computeUnique $ concat [[(elemCon !! en !! i, atIndex (elemF !! en) i) | i <- [0..(order $ elems !! en)]] | en <- [0..(nelem - 1)]]
 
-applyBoundaryConditions :: (AssocMatrix, [(Int, Double)]) -> (GMatrix, Vector Double)
+--applyBoundaryConditions :: (AssocMatrix, [(Int, Double)]) -> (GMatrix, Vector Double)
+applyBoundaryConditions :: (AssocMatrix, [(Int, Double)]) -> (Matrix Double, Vector Double)
 applyBoundaryConditions unconstData = (newMat, newVec)
   where
     unconstMat = fst unconstData
     unconstVec = snd unconstData
-    numNodes = length unconstVec
-    zeroedMat = filter (\ entry -> fst (fst entry) /= 0 && fst (fst entry) /= (numNodes-1)) unconstMat
-    zeroedVec = filter(\ entry -> fst entry /= 0 && fst entry /= (numNodes-1)) unconstVec
-    newMat = mkSparse $ ((0,0), 1.0) : ((numNodes-1,numNodes-1), 1.0) : zeroedMat
-    newVec = fromList $ map snd $ sortOn fst $ (0, 0.0) : (numNodes-1, 0.0) : zeroedVec
+    numNodes   = length unconstVec
+    zeroedMat  = filter (\ entry -> fst (fst entry) /= 0 && fst (fst entry) /= (numNodes-1)) unconstMat
+    zeroedVec  = filter(\ entry -> fst entry /= 0 && fst entry /= (numNodes-1)) unconstVec
+    newMat     = toDense $ ((0, 0), 1.0) : ((numNodes-1,numNodes-1), 1.0) : zeroedMat
+    newVec     = fromList $ map snd $ sortOn fst $ (0, 0.0) : (numNodes-1, 0.0) : zeroedVec
 
 -- Function for solving the problem
 femSolve :: Mesh -> Int -> Vector Double
-femSolve grid ngpts = cgSolve False cStiffnessMat cLoadVec
+--femSolve grid ngpts = cgSolve True cStiffnessMat cLoadVec
+femSolve grid ngpts = cStiffnessMat <\> cLoadVec
   where
-    elemData = map (integrateElement ngpts) (elements grid)
-    globalData = assembleLinearSystem elemData grid
-    stiffnessMat = fst globalData
-    loadVec = snd globalData
+    elemData        = map (integrateElement ngpts) (elements grid)
+    globalData      = assembleLinearSystem elemData grid
+    stiffnessMat    = fst globalData
+    loadVec         = snd globalData
     constrainedData = applyBoundaryConditions (stiffnessMat, loadVec)
-    cStiffnessMat = fst constrainedData
-    cLoadVec = snd constrainedData
+    cStiffnessMat   = fst constrainedData
+    cLoadVec        = snd constrainedData
 
 -- Function for writing solution to file for plotting
 writeSolution :: String -> Mesh -> Vector Double -> IO()
 writeSolution fileName grid soln = writeFile fileName fileStr
   where
     uniqueNodes = nub $ concatMap nodes $ elements grid
-    nNodes = length uniqueNodes
-    nodeCoords = map coordinates uniqueNodes
-    lines = [show (head (nodeCoords !! nn)) ++ " " ++ show (atIndex soln nn) ++ "\n" | nn <- [0..(nNodes-1)]]
-    fileStr = concat lines
-
--- fromList [((1,2),"hello")] :: Data.Map.Map (Int,Int) String
--- Strict map.
--- Data.Map.unionWith mappend (fromList [((1,2),"hello")]) (fromList [((1,2)," world")]) :: Data.Map.Map (Int,Int) String
+    nNodes      = length uniqueNodes
+    nodeCoords  = map coordinates uniqueNodes
+    lines       = [show (head (nodeCoords !! nn)) ++ " " ++ show (atIndex soln nn) ++ "\n" | nn <- [0..(nNodes-1)]]
+    fileStr     = concat lines

@@ -16,11 +16,14 @@ import Mesh
 import Solver
 
 main = do
-  let ngpts = 3
-  let grid = generateMesh 0.0 1.0 5 1
+  let ngpts = 2
+  let grid = generateMesh 0.0 1.0 50 1
   let elemData = map (integrateElement ngpts) (elements grid)
-  print $ fst $ elemData !! 1
-  --let globalData = assembleLinearSystem elemData grid
-  --let stiffnessMat = fst globalData
-  --let loadVec = snd globalData
-  --saveMatrix "stiffness.dat" "%.4f" $ toDense stiffnessMat
+  let globalData = assembleLinearSystem elemData grid
+  let stiffnessMat = fst globalData
+  let loadVec = snd globalData
+  --print $ fromList $ map snd loadVec
+  --let load = [((fst entry, 0 :: Int), snd entry) | entry <- loadVec]
+  saveMatrix "stiffness.dat" "%2.10f" $ toDense stiffnessMat
+  --saveMatrix "load.dat" "%2.10f" $ toDense load
+  saveMatrix "load.dat" "%2.10f" $ asColumn (fromList $ map snd loadVec)

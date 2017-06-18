@@ -1,13 +1,5 @@
 module Mesh
 where
---( Node
---, Element
---, Mesh
---, generateMesh
---, coordinates
---, nodes
---, computeJacobianDet
---) where
 
 import Data.List
 
