@@ -10,6 +10,11 @@ data Node = Node {
   nodeNumber  :: Int,
   coordinates :: [Double]
 } deriving (Show,Eq)
+--} deriving (Show)
+
+-- Eq instance for Node (unnecessary since deriving Eq checks equality of nodeNumber and coordinates).
+--instance Eq Node where
+--  (==) (Node nodeNum coords) (Node nodeNum' coords') = nodeNum == nodeNum'
 
 -- Type for element - holds a list of nodes
 data Element = Element {
