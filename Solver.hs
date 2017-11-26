@@ -1,12 +1,12 @@
 module Solver
 where
 
-import Data.List
-import System.IO
-import Numeric.LinearAlgebra.Data
-import Numeric.LinearAlgebra.HMatrix
-import Mesh
-import ShapeFcns
+import           Data.List
+import           Mesh
+import           Numeric.LinearAlgebra.Data
+import           Numeric.LinearAlgebra.HMatrix
+import           ShapeFcns
+import           System.IO
 
 -- Function for getting Gauss points for integration
 -- Given the number of points it returns a list of the points and the weights
